@@ -17,14 +17,14 @@ class NewprojectsController < ApplicationController
   def create
   	@newproject=current_user.newprojects.create(newproject_params)
   	@newproject.user_id=current_user.id 
-  	@hashtags = @photo.caption.scan(/#\w+/).flatten
+  	@hashtags = @newproject.category.scan(/#\w+/).flatten
   	hashs=Hashtag.all
 
   	@hashtags.each do |hash|
-		if(Hashtag.find_by text: hash)
-			@hashtag = Hashtag.find_by text: hash
+		if(Hashtag.find_by categorytext: hash)
+			@hashtag = Hashtag.find_by categorytext: hash
 		else
-			@hashtag = Hashtag.create(text: hash)
+			@hashtag = Hashtag.create(categorytext: hash)
 		end			
 			@newproject.hashtags << @hashtag
 		end
@@ -34,7 +34,7 @@ class NewprojectsController < ApplicationController
   	else
   		render 'new'
   	end
-  	
+
   end
 
 
@@ -44,12 +44,27 @@ class NewprojectsController < ApplicationController
 
   def edit
   	@newproject=Newproject.find params[:id]
+  	@hashtags=[]
+  	@hashtags = @newproject.category.scan(/#\w+/).flatten
+  	hashs=Hashtag.all
+
+  	@hashtags.each do |hash|
+		if(Hashtag.find_by categorytext: hash)
+			@hashtag = Hashtag.find_by categorytext: hash
+		else
+			@hashtag = Hashtag.create(categorytext: hash)
+		end			
+			@newproject.hashtags << @hashtag
+		end
+
 
   end
 
   def update
 
   	@newproject=current_user.newprojects.find params[:id]
+  	@hashtags=@newproject.hashtags
+
 		if @newproject.update(newproject_params)
 			redirect_to user_newproject_path(current_user, @newproject)
 		else

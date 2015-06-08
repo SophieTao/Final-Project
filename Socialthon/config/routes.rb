@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 resources :users do
   resources :newprojects do
-      resources :pins 
+      resources :hashtags 
     end
   end
 

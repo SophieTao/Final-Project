@@ -1,2 +1,9 @@
 <h1>Newprojects#index</h1>
-<p>Find me in app/views/newprojects/index.html.erb</p>
+
+<%@newprojects.each do |newproject|%>
+<%=newproject.title%>
+<%=link_to "NewProject show page", user_newproject_path(current_user,newproject.id)%> <br>
+
+<%end%>
+<%=link_to "Create NewProject", new_user_newproject_path(current_user)%>
+
