@@ -1,12 +1,31 @@
 <strong>SocialThon</strong>
 <style>
 img {
-  width: 100%;
- margin-top: -10px;
+ 
+
+}
+p1 {
+	width: 40%;
+
 }
 </style>
-<img><%= image_tag("https://capetowntownshiptour.files.wordpress.com/2010/03/pg-35-11597991.jpg") %></img>
+<img><%= image_tag("https://capetowntownshiptour.files.wordpress.com/2010/03/pg-35-11597991.jpg",  :width => "100%",  :margin => "-10px") %></img>
 
 <p><%= link_to 'Community', communities_path%></p>
 <p><%= link_to 'About Us', teams_path%></p>
 <p><%= link_to 'Projects', projects_path%></p>
+<p><%=markdown"Education            Health"%></p>
+<p1><%= link_to image_tag("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQSMhA8KkNMGwZaziVTFfMj6WzyOfeN4hHk6cQ9R5cByxF4p7PR", :width => "40%", :height => "40%"), educations_path %>
+<%= link_to image_tag("https://redcrossyouth.files.wordpress.com/2011/08/regina_central-african-republic-daniel-cima.jpg", :width => "30%", :height => "40%"), healths_path %>
+</p1>
+<p><%=markdown"Poverty            Arts & Culture"%></p>
+<p1><%= link_to image_tag("http://travelblog.mtsobek.com/wp-content/uploads/2011/11/khayelitsha_township.jpg", :width => "30%", :height => "30%"), poverties_path %>
+<%= link_to image_tag("http://groundup.org.za/sites/default/files/styles/article_image/public/field/image/children_lose_their_playground.JPG?itok=wIkyQcXo", :width => "30%", :height => "40%"), arts_path %></p1>
+<p>Timeline Section </p>
+<p><%=markdown "Meet Samantha
+
+Samantha is a sixth-grade girl." %></p>
+<p><%=markdown "Meet Chief
+
+Chief is a bus driver." %></p>
+
