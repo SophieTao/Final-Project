@@ -9,6 +9,8 @@ resources :projects
 resources :educations
 resources :businesses
 resources :centers
+resources :healths
+resources :sports
   # You can have the root of your site routed with "root"
    root 'users#index'
 
