@@ -6,6 +6,9 @@ resources :users
 resources :communities
 resources :teams
 resources :projects
+resources :educations
+resources :businesses
+resources :centers
   # You can have the root of your site routed with "root"
    root 'users#index'
 
