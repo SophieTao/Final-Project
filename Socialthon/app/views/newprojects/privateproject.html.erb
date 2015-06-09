@@ -1,8 +1,8 @@
 <div class="container">
     <h1>Your Private Projects</h1>
+    <button type="button">   
+    <%=link_to "Your Project List", user_newprojects_path(current_user)%></button> 
 
-    <button type="button">      
-    <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
     <button type="button">      
     <%=link_to "Public", newprojects_publicproject_path%></button>  
     
@@ -193,25 +193,25 @@
             <div class="col-lg-12">
                 <ul class="pagination">
                     <li>
-                        <a href="#">&laquo;</a>
+                        <%=link_to "&laquo;".html_safe, newprojects_publicproject_path%>
+                    </li>
+                    <li>
+                        <%=link_to "Your Project List", user_newprojects_path(current_user)%>
+                    </li>
+                    <li>
+                        <%=link_to "Public", newprojects_publicproject_path%>
                     </li>
                     <li class="active">
-                        <a href="#">1</a>
+                        <%=link_to "Private", newprojects_privateproject_path%>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                         <%=link_to "Team", newprojects_team_path%>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                         <%=link_to "Individual", newprojects_individual_path%>
                     </li>
                     <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
+                        <%=link_to "&raquo;".html_safe, newprojects_team_path%>
                     </li>
                 </ul>
             </div>
@@ -219,12 +219,14 @@
         <!-- /.row -->
 
         <hr>
-
+        <button type="button">      
+    <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
+        <hr>
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                     <p><img src='/assets/logo.jpg'  height="30" width="30"/> Copyright &copy; Socialthon 2015 </p>
                 </div>
             </div>
             <!-- /.row -->

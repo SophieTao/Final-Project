@@ -21,6 +21,8 @@ resources :projects
 get 'newprojects/publicproject'
 get 'newprojects/privateproject'
 get 'newprojects/team'
+get 'newprojects/individual'
+
 
   # You can have the root of your site routed with "root"
    root 'users#index'

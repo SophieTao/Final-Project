@@ -2,16 +2,6 @@
     <div class="container">
     <h1>Your Own Projects</h1>
 
-    <button type="button">      
-    <%=link_to "New Project", new_user_newproject_path(current_user)%></button>  
-
-    <button type="button">      
-    <%=link_to "Public", newprojects_publicproject_path%></button>  
-
-    <button type="button">      
-    <%=link_to "Private", newprojects_privateproject_path%></button>  
-        
-
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
@@ -203,30 +193,34 @@
         <!-- /.row -->
         <hr>
         <!-- Pagination -->
+
+
         <div class="row text-center">
             <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
+                <ul class="pagination"> 
+                     <li>
+                        <%=link_to "&laquo;".html_safe, newprojects_individual_path%>
                     </li>
+
                     <li class="active">
-                        <a href="#">1</a>
+                        <%=link_to "Your Project List", user_newprojects_path(current_user)%>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                        <%=link_to "Public", newprojects_publicproject_path%>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                        <%=link_to "Private", newprojects_privateproject_path%>
                     </li>
                     <li>
-                        <a href="#">4</a>
+                         <%=link_to "Team", newprojects_team_path%>
                     </li>
                     <li>
-                        <a href="#">5</a>
+                         <%=link_to "Individual", newprojects_individual_path%>
                     </li>
-                    <li>
-                        <a href="#">&raquo;</a>
+                     <li>
+                        <%=link_to "&raquo;".html_safe, newprojects_publicproject_path%>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -234,6 +228,10 @@
 
         <hr>
 
+    <button type="button">      
+    <%=link_to "New Project", new_user_newproject_path(current_user)%></button>  
+
+        <hr>
         <!-- Footer -->
         <footer>
             <div class="row">

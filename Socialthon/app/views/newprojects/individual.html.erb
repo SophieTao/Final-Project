@@ -1,5 +1,5 @@
 <div class="container">
-    <h1>Your Team Projects</h1>
+    <h1>Your Individual Projects</h1>
 
         <!-- Page Header -->
         <div class="row">
@@ -13,7 +13,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_education.each do |project|%>
+        <%@individualproject_education.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -46,7 +46,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_health.each do |project|%>
+        <%@individualproject_health.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -80,7 +80,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_poverty.each do |project|%>
+        <%@individualproject_poverty.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -112,7 +112,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_artsandculture.each do |project|%>
+        <%@individualproject_artsandculture.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -145,7 +145,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_business.each do |project|%>
+        <%@individualproject_business.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -178,7 +178,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@teamproject_foodsecurity.each do |project|%>
+        <%@individualproject_foodsecurity.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 </a>
@@ -199,11 +199,11 @@
         <!-- /.row -->
         <hr>
         <!-- Pagination -->
-           <div class="row text-center">
+             <div class="row text-center">
             <div class="col-lg-12">
                 <ul class="pagination">
                     <li>
-                        <%=link_to "&laquo;".html_safe, newprojects_privateproject_path%>
+                        <%=link_to "&laquo;".html_safe, newprojects_team_path%>
                     </li>
                     <li>
                         <%=link_to "Your Project List", user_newprojects_path(current_user)%>
@@ -214,29 +214,28 @@
                     <li>
                         <%=link_to "Private", newprojects_privateproject_path%>
                     </li>
-                    <li class="active">
+                    <li>
                          <%=link_to "Team", newprojects_team_path%>
                     </li>
-                    <li>
+                    <li class="active">
                          <%=link_to "Individual", newprojects_individual_path%>
                     </li>
                     <li>
-                        <%=link_to "&raquo;".html_safe, newprojects_individual_path%>
+                         <%=link_to "&raquo;".html_safe, user_newprojects_path(current_user)%>
                     </li>
                 </ul>
             </div>
         </div>
         <!-- /.row -->
-
         <hr>
-    	<button type="button">      
-    	<%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
-        </hr>
+         <button type="button">      
+            <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
+        <hr>
         <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p><img src='/assets/logo.jpg'  height="30" width="30"/> Copyright &copy; Socialthon 2015</p>
+                    <p><img src='/assets/logo.jpg'  height="30" width="30"/> Copyright &copy; Socialthon 2015 </p>
                 </div>
             </div>
             <!-- /.row -->

@@ -41,26 +41,14 @@ class NewprojectsController < ApplicationController
   	@newproject=Newproject.find params[:id]
   
   	if !@newproject.public? && @newproject.user != current_user
-			redirect_to :root, alert: "You cannot access that board"
+			redirect_to :root, alert: "You cannot access that project!"
 		end
- 	  #@hashtags=@newproject.hashtags 
+
   end
 
   def create
   	@newproject=current_user.newprojects.create(newproject_params)
   	@newproject.user_id=current_user.id 
-
-  	#@hashtags = @newproject.category.scan(/#\w+/).flatten
-  	#hashs=Hashtag.all
-
-  	#@hashtags.each do |hash|
-		#if(Hashtag.find_by categorytext: hash)
-			#@hashtag = Hashtag.find_by categorytext: hash
-		#else
-			#@hashtag = Hashtag.create(categorytext: hash)
-		#end			
-			#@newproject.hashtags << @hashtag
-		#end
 
   	if @newproject.save
   		redirect_to user_newproject_path(current_user, @newproject)
@@ -77,23 +65,10 @@ class NewprojectsController < ApplicationController
 
   def edit
   	@newproject=Newproject.find params[:id]
-  	#@hashtags=[]
-  	#@hashtags = @newproject.category.scan(/#\w+/).flatten
-  	#hashs=Hashtag.all
-
-  	#@hashtags.each do |hash|
-		#if(Hashtag.find_by categorytext: hash)
-			#@hashtag = Hashtag.find_by categorytext: hash
-		#else
-			#@hashtag = Hashtag.create(categorytext: hash)
-		#end			
-			#@newproject.hashtags << @hashtag
-		#end
   end
 
   def update
   	@newproject=current_user.newprojects.find params[:id]
-  	#@hashtags=@newproject.hashtags
 
 		if @newproject.update(newproject_params)
 			redirect_to user_newproject_path(current_user, @newproject)
@@ -116,6 +91,7 @@ class NewprojectsController < ApplicationController
         @publicprojects<<project
       end
     end
+
     @publicproject_education=[]
     @publicproject_health=[]
     @publicproject_poverty=[]
@@ -196,15 +172,95 @@ class NewprojectsController < ApplicationController
   end
 
   def team
-    @newproject=Newproject.new
+    @teamprojects=[]
+    @newprojects=Newproject.all
+    @newprojects.each do |project|
+      if project.team==true
+        @teamprojects<<project
+      end
+    end
+    @teamproject_education=[]
+    @teamproject_health=[]
+    @teamproject_poverty=[]
+    @teamproject_artsandculture=[]
+    @teamproject_business=[]
+    @teamproject_foodsecurity=[]
+
+    @teamprojects.each do |teamproject|
+      if teamproject.education==true
+        @teamproject_education<<teamproject
+      end
+
+      if teamproject.health==true
+        @teamproject_health<<teamproject
+      end
+
+       if teamproject.poverty==true
+       @teamproject_poverty<<teamproject
+      end
+
+      if teamproject.artsandculture==true
+        @teamproject_artsandculture<<teamproject
+      end
+
+      if teamproject.business==true
+        @teamproject_business<<teamproject
+      end
+
+      if teamproject.foodsecurity==true
+        @teamproject_foodsecurity<<teamproject
+      end
+    end
   end
+
+  def individual
+    @individualprojects=[]
+    @newprojects=Newproject.all
+    @newprojects.each do |project|
+      if project.team==true
+        @individualprojects<<project
+      end
+    end
+    @individualproject_education=[]
+    @individualproject_health=[]
+    @individualproject_poverty=[]
+    @individualproject_artsandculture=[]
+    @individualproject_business=[]
+    @individualproject_foodsecurity=[]
+
+    @individualprojects.each do |individualproject|
+      if individualproject.education==true
+        @individualproject_education<<individualproject
+      end
+
+      if individualproject.health==true
+        @individualproject_health<<individualproject
+      end
+
+       if individualproject.poverty==true
+       @individualproject_poverty<<individualproject
+      end
+
+      if individualproject.artsandculture==true
+        @individualproject_artsandculture<<individualproject
+      end
+
+      if individualproject.business==true
+        @individualproject_business<<individualproject
+      end
+
+      if individualproject.foodsecurity==true
+        @individualproject_foodsecurity<<individualproject
+      end
+    end
+  end
+
 
 
 
   private
 	def newproject_params
 			params.require(:newproject).permit(:creator,:title, :category, :description, :public, :individual, :email, :education, :health, :poverty, :artsandculture, :business,:foodsecuritym, :url, :member1, :member2, :member3, :member4, :member5, :team)
-
 	end
 
 
