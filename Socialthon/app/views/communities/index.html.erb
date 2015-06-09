@@ -1,4 +1,33 @@
-<p><strong>Khayelitsha Community</strong></p>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map-canvas {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <p><strong>Khayelitsha Community</strong></p>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.0402778, 18.677777800000058),
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>
+  </body>
+</html>
 <%= markdown "Built in the early 1980s on the Cape Flats about 20 minutes/'' drive from the Cape Town CBD, Khayelitsha is a bustling mix of township 'box houses' and makeshift shacklands that regularly fall prey to wildfires and flooding. Meaning New Home in Xhosa,Khayelitsha Today Khayelitsha has a population of 391,749. 
 
 In 2011 around 62% of residents in Khayelitsha were rural to urban migrants, most coming from the Eastern Cape.
