@@ -6,13 +6,20 @@
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
+<style>
+/*  div {
+    background: url(https://capetowntownshiptour.files.wordpress.com/2010/03/pg-35-11597991.jpg);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+}*/
+</style>
 <body>
 
 <!-- <div data-role="page">
   <div data-role="header"> -->
     <h1>Projects</h1>
  <!--  </div> -->
-
+<div1></div>
 
 
   <!-- <div data-role="footer">
@@ -94,11 +101,11 @@
     </div>
   </div>
 </div>  --> 
- <div data-role="main" class="ui-content">
+ <li data-role="main" class="ui-content">
      <a href="#myPopup" data-rel="popup" 
      class="ui-btn ui-btn-inline ui-corner-all" 
      data-position-to="#demo"><img alt="Beam" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQYaLHQWc1ldTjQYt6fCT6grr40g-9920Xc6Tgub9jDCli3-i52" /></a>
-    <div data-role="popup" id="myPopup" class="ui-content">
+    <li data-role="popup" id="myPopup" class="ui-content">
       <h3>Details</h3>
       <p>More About Education Issues in the community
      <!--  <span style="font-size:55px;"> -->
@@ -106,10 +113,27 @@
      <!--  </span> -->
       <!-- , <strong>Note:</strong> The text will wrap to multiple lines if needed. -->
       
-          </div>
-    </div>
-    <p><strong>Project1</strong>
-<strong>Project2</strong>
+          </li>
+    </li>
+    <p><strong><%=markdown"The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.  
+Problems: 1.Shortage of educational opportunities
+
+ 2. Sciences and technology lap
+
+ 3. Drop out leaners.
+
+Cause the challenge: Each School has a large number of students.
+
+Less pass rate in Sciences and technology because of less pretcails in high school and college.
+
+No moretivel speaks in school around final Exam time or friends infuse.
+
+Why should it be fixing: To educate more young people and give them skill of life which is 
+
+education. People with education have more chances in life and with this lap being build it will help 
+
+them to understand more about the subject him/her doing in school."%></strong>
+<p><strong>Project2</strong>
 <strong>Project3</strong></p>
   <p><%= link_to 'Learn More', educations_path%></p>
 <p><strong>Business</strong></p>
@@ -129,6 +153,19 @@
  <p><%= link_to 'Learn More', healths_path%></p>
 <p><strong>Arts & Culture</strong></p>
 <p><strong>Project1</strong>
+<%=markdown"As we know Khayelitsha has high number young inside it, which has 6 different cultures delimiting.
+
+This entire young people have talent into different act skills e.g. dancer, drawing & etc. This area has 
+
+many act & culters groups which own by young people.
+
+We have fond same challenges as follow: 1. No theatre
+
+Causes the challenges: Ignores to our government about theatre and some young people never 
+
+teaches about their culture. Language issue depend to family lessons when you’re growing up or you 
+
+not wanting to leaner."%>
 <strong>Project2</strong>
 <strong>Project3</strong></p>
  <p><%= link_to 'Learn More', arts_path%></p>

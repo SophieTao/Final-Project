@@ -3,15 +3,15 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 resources :users
-resources :communities
-resources :teams
-resources :projects
-resources :educations
-resources :businesses
-resources :securities
-resources :healths
-resources :arts
-resources :poverties
+resources :communities, only: [:index]
+resources :teams, only: [:index]
+resources :projects, only: [:index]
+resources :educations, only: [:index]
+resources :businesses, only: [:index]
+resources :securities, only: [:index]
+resources :healths, only: [:index]
+resources :arts, only: [:index]
+resources :poverties, only: [:index]
   # You can have the root of your site routed with "root"
    root 'users#index'
 
