@@ -38,10 +38,42 @@ ActiveRecord::Schema.define(version: 20150608202942) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "hashtags", force: :cascade do |t|
+    t.string   "categorytext"
+    t.integer  "user_id"
+    t.integer  "newproject_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "hashtags", ["newproject_id"], name: "index_hashtags_on_newproject_id"
+  add_index "hashtags", ["user_id"], name: "index_hashtags_on_user_id"
+
   create_table "healths", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "newprojects", force: :cascade do |t|
+    t.string   "creator"
+    t.string   "title"
+    t.string   "category"
+    t.text     "description"
+    t.boolean  "public"
+    t.boolean  "individual"
+    t.string   "email"
+    t.integer  "user_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "education"
+    t.boolean  "health"
+    t.boolean  "poverty"
+    t.boolean  "artsandculture"
+    t.boolean  "business"
+    t.boolean  "foodsecurity"
+  end
+
+  add_index "newprojects", ["user_id"], name: "index_newprojects_on_user_id"
 
   create_table "poverties", force: :cascade do |t|
     t.datetime "created_at", null: false

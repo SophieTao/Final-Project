@@ -1,0 +1,74 @@
+
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Newprojects#index</h1>
+			<%@newprojects.each do |newproject|%>
+				<%=newproject.title%>
+				<%=link_to "NewProject show page", user_newproject_path(current_user,newproject.id)%> <br>
+			<%end%>
+			<%=link_to "Create NewProject", new_user_newproject_path(current_user)%>
+
+		</div>
+		<div class="row">
+			Education
+			<%@newproject_education.each do |newproject| %>
+				<%=newproject.title%>
+			<%end%>
+		</div>
+		<div class="row">
+			Health 
+			<%=@newproject_health%>
+		</div>
+		<div class="row">
+			Poverty
+			<%=@newproject_poverty%>
+
+		</div>
+		<div class="row">
+			Arts&Culture 
+			<%=@newproject_artsandculture%> 
+
+		</div>
+	</div>
+
+</body>
+
+
+
+
+
+
+
+<p>
+Education
+<%@newproject_education.each do |newproject| %>
+<%=newproject.title%>
+<%end%>
+</p>
+
+<p>
+Health 
+<%=@newproject_health%><br>
+</p>
+
+<p>
+Poverty
+<%=@newproject_poverty%><br>
+</p>
+
+<p>
+Arts&Culture 
+<%=@newproject_artsandculture%> <br>
+</p>
+
+<p>
+Business
+<%=@newproject_business%> <br>
+</p>
+
+<p>
+Food Security
+<%=@newproject_foodsecurity%> <br>
+</p>
+

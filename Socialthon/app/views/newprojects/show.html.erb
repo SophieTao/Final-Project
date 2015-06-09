@@ -1,0 +1,29 @@
+<br>
+<%=@newproject.category%>
+<%=link_to "NewProject edit page", edit_user_newproject_path(current_user,@newproject.id)%>
+<%=link_to "NewProject delete page", user_newproject_path(current_user,@newproject.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%><br>
+<br>
+
+
+
+The value of newproject.category <br>
+Education? <%=@newproject.education%><br>
+Health? <%=@newproject.health%><br>
+Poverty? <%=@newproject.poverty%><br>
+
+Arts and Culture? <%=@newproject.artsandculture%><br>
+
+Business? <%=@newproject.business%><br>
+Food security? <%=@newproject.foodsecurity%><br>
+
+Inividaul or team? 
+<%=@newproject.individual%>
+
+
+<%hashtags=@newproject.hashtags%>
+<div class = "hashes">
+<% hashtags.each do |hashtag| %>
+	<%=link_to hashtag.categorytext, user_newproject_hashtag_path(current_user,@newproject.id,hashtag.id) %>
+<% end %>
+</br>
+<%=link_to "NewProject Index page", user_newprojects_path(current_user)%>

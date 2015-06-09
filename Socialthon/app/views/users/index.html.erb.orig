@@ -1,0 +1,16 @@
+<strong>SocialThon</strong>
+<<<<<<< HEAD
+<%=link_to "NewProject_index", user_newprojects_path(current_user)%>
+=======
+<style>
+img {
+  width: 100%;
+ margin-top: -10px;
+}
+</style>
+<img><%= image_tag("https://capetowntownshiptour.files.wordpress.com/2010/03/pg-35-11597991.jpg") %></img>
+
+<p><%= link_to 'Community', communities_path%></p>
+<p><%= link_to 'About Us', teams_path%></p>
+<p><%= link_to 'Projects', projects_path%></p>
+>>>>>>> ef3f6f8b25299bc055c80c1f02942ac9db26ce14
