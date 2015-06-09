@@ -1,16 +1,70 @@
 <%=render 'nav'%>
 <p><strong>About Us</strong></p>
-<p><strong>Organizers</strong></p>
-<p><strong>Faith Sidinana</strong></p>
-<%=markdown"Active Member of Khayelitsha Youth Development Council 
-Faith is from Khayelitsha and currently responsible for helping young people in Khayelitsha community achieve their goals. He finished his studies at Activate Leadership & Public Innovation, Cape Town." %>
-<img><%= image_tag("https://mail.google.com/mail/u/1/?ui=2&ik=3c23c4b040&view=fimg&th=14dd3bd4b31e9363&attid=0.1&disp=inline&realattid=f_iao1ld6e0&safe=1&attbid=ANGjdJ9YnrFtAo6FbzlTqmvwM7vBgPg2aY4wL5RTIZ6Nh6s18ZaWqnEtPu4_QvkOxhtuwRyIBxyka1zwQSWtZaVQVBL_Gl6NtStK09UV3yuo6izDia9pC_ZeFdnXZs0&ats=1433776510091&rm=14dd3bd4b31e9363&zw&sz=w761-h604") %></img> 
-<p><strong>Mthunzi Qagana</strong></p>
-<p><%=markdown"Active Member of Khayelitsha Youth Development Council
-As a Youth Projects Coordinator at the Whizz Center, Mthunzi is passionate about youth development. He organizes technical training program for youth in the community. He is a graduate of University of Western Cape, majoring Law."%>
-<img><%= image_tag("https://mail.google.com/mail/u/1/?ui=2&ik=3c23c4b040&view=fimg&th=14dd3bf3a0bc7c1c&attid=0.1&disp=inline&realattid=f_iao1nzwc0&safe=1&attbid=ANGjdJ8zVzgG6i6VvlnfHh2IxLl8yiDhT8vV0Hkw0TbmU_zCEcnuiDHeFd0xz_SN9VGavb_HooTjaaUaHmu4ngTc_3nkHLsecltBgYl9OOgCG_4sbZN2BRtBxBoNEo0&ats=1433776638347&rm=14dd3bf3a0bc7c1c&zw&sz=w761-h604")%> 
-<p><strong>Sponsors</strong></p>
-<p><strong>Partners</strong></p>
-<p><%=link_to image_tag("https://media.licdn.com/mpr/mpr/shrink_200_200/p/1/005/08e/3d8/2210d0f.png"), "http://www.citi.org.za"%></p>
-<p><%=link_to image_tag("http://4.bp.blogspot.com/-NWfLAcaxWDM/TfIx8LQDVqI/AAAAAAAAAEs/ZgfvKVCUsNI/s748/Khayelitsha%252BYouth%252BDevelopment%252BCouncil%252B.jpg"), "http://kydc.blogspot.com/"%></p>
-<p><%= link_to 'Home', users_path%></p>
+
+<div class="container" id="team" name="team">
+		<br>
+			<div class="row white centered">
+				<h1 class="centered">MEET OUR AWESOME TEAM</h1>
+				<hr>
+				<br>
+				<br>
+	<div class="col-lg-6 centered">
+					<img class="img img-circle" src="https://scontent.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/11261927_775147052583845_509271203549981200_n.jpg?oh=b4dd9f6e5434de4934fbc6da872d9878&oe=55F1D20A" height="200px" width="180px" alt="">
+					<br>
+					<h4><b>Yunny Chung</b></h4>
+						<strong>Brown University '17</strong>
+<%=markdown"~~~~"%>
+				</div><!-- col-lg-3 -->
+				<div class="col-lg-6 centered">
+					<img class="img img-circle" src="http://i.imgur.com/mwDPLQP.png?1" height="200px" width="200px" alt="">
+					<br>
+					<h4><b>Sophie Tao</b></h4>
+					<strong>UVa '17</strong> 
+<%=markdown"~~~~" %>
+				</div><!-- col-lg-3 -->
+				
+				<div class="col-lg-6 centered">
+					<img class="img img-circle" src="http://i.imgur.com/YhjNNTz.png" height="200px" width="200px" alt="">
+					<br>
+					<h4><b>Mthunzi Qagana</b></h4>
+						<strong>Active Member of Khayelitsha Youth Development Council</strong>
+<%=markdown"As a Youth Projects Coordinator at the Whizz Center, Mthunzi is passionate about youth development. He organizes technical training program for youth in the community. He is a graduate of University of Western Cape, majoring Law."%>
+				</div><!-- col-lg-3 -->
+				<div class="col-lg-6 centered">
+					<img class="img img-circle" src="http://i.imgur.com/mwDPLQP.png?1" height="200px" width="200px" alt="">
+					<br>
+					<h4><b>Faith Sidinana</b></h4>
+					<strong>Active Member of Khayelitsha Youth Development Council</strong> 
+<%=markdown"Faith is from Khayelitsha and currently responsible for helping young people in Khayelitsha community achieve their goals. He finished his studies at Activate Leadership & Public Innovation, Cape Town." %>
+				</div><!-- col-lg-3 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		<div class="container" id="partner" name="partner">
+		<br>
+			<div class="row white centered">
+				<h1 class="centered">Partners</h1>
+				<hr>
+				<br>
+				<br>
+	<div class="col-lg-6 centered">
+	<p><%=link_to image_tag("http://4.bp.blogspot.com/-NWfLAcaxWDM/TfIx8LQDVqI/AAAAAAAAAEs/ZgfvKVCUsNI/s748/Khayelitsha%252BYouth%252BDevelopment%252BCouncil%252B.jpg"), "http://kydc.blogspot.com/"%></p>
+					<br>
+				</div><!-- col-lg-3 -->
+				<div class="col-lg-6 centered">
+<p><%=link_to image_tag("http://api.ning.com/files/Tc1DvjhnAzV1o6OXzDPRBJwMdABO7vyQ9ELS-L8Ardx93oX0PDcRcIBNw*rvWvAxyeDhO*LSyJBLkRFylWdN*4*WE6iUBNKD/CITI_logo.jpeg")  :height=>"200px", :width=>"200px", "http://www.citi.org.za"%></p>
+
+					<br>
+				</div><!-- col-lg-3 -->
+
+<div class="container" id="sponsor" name="sponsor">
+		<br>
+			<div class="row white centered">
+				<h1 class="centered">Sponsors</h1>
+				<hr>
+				<br>
+				<br>
+	<div class="col-lg-12 centered">
+	<p><%=link_to image_tag("https://pbs.twimg.com/profile_images/467248542537379840/AgqCzATA.png"), "http://ixperience.co.za"%></p>
+				
+					<br>
+				</div><!-- col-lg-3 -->
