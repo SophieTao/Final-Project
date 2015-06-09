@@ -152,7 +152,7 @@ class NewprojectsController < ApplicationController
 
   def privateproject
     @privateprojects=[]
-    @newprojects=current_user.projects
+    @newprojects=current_user.newprojects
 
     @newprojects.each do |newproject|
       if newproject.public==false

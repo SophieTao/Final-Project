@@ -5,25 +5,52 @@
 <br>
 
 
+<p>
+<% if @newproject.url!=nil%><%= image_tag(@newproject.url, width: "30%", height: "30%")%><%end%><br>
+Creator: <%=@newproject.creator%><br>
+Creator's Email: <%=@newproject.email%><br>
+Title: <%=@newproject.title%><br>
+Category: 
+<%if @newproject.education==true%>
+Education<br>
+<%end%>
+<%if @newproject.health==true%>
+Health<br>
+<%end%>
+<%if @newproject.poverty==true%>
+Poverty<br>
+<%end%>
+<%if @newproject.artsandculture==true%>
+Arts&Culture <br>
+<%end%>
+<%if @newproject.business==true%>
+Business<br>
+<%end%>
 
-The value of newproject.category <br>
-Education? <%=@newproject.education%><br>
-Health? <%=@newproject.health%><br>
-Poverty? <%=@newproject.poverty%><br>
+<%if @newproject.foodsecurity==true%>
+Food Security<br>
+<%end%>
 
-Arts and Culture? <%=@newproject.artsandculture%><br>
+Description:
+Privacy: 
+<%if @newproject.public==true%>
+	Public <br>
+	<ul>
+  	<%if @newproject.member1!=""%><li><%=@newproject.member1%></li><%end%>
+  	<%if @newproject.member2!=""%><li><%=@newproject.member2%></li><%end%>
+  	<%if @newproject.member3!=""%><li><%=@newproject.member3%></li><%end%>
+  	<%if @newproject.member4!=""%><li><%=@newproject.member4%></li><%end%>
+  	<%if @newproject.member5!=""%><li><%=@newproject.member5%></li><%end%>
+	</ul>
+<%else%>
+	Private
+<%end%>
 
-Business? <%=@newproject.business%><br>
-Food security? <%=@newproject.foodsecurity%><br>
+</p>
 
-Inividaul or team? 
-<%=@newproject.individual%>
-<%=@newproject.team%>
+<%=link_to "NewProject List", user_newprojects_path(current_user)%>
 
-<%hashtags=@newproject.hashtags%>
-<div class = "hashes">
-<% hashtags.each do |hashtag| %>
-	<%=link_to hashtag.categorytext, user_newproject_hashtag_path(current_user,@newproject.id,hashtag.id) %>
-<% end %>
-</br>
-<%=link_to "NewProject Index page", user_newprojects_path(current_user)%>
+
+
+
+

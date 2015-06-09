@@ -1,15 +1,12 @@
-   <!-- Page Content -->
-    <div class="container">
-    <h1>Your Own Projects</h1>
+<div class="container">
+    <h1>Your Private Projects</h1>
 
     <button type="button">      
-    <%=link_to "New Project", new_user_newproject_path(current_user)%></button>  
-
+    <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
     <button type="button">      
     <%=link_to "Public", newprojects_publicproject_path%></button>  
+    
 
-    <button type="button">      
-    <%=link_to "Private", newprojects_privateproject_path%></button>  
         
 
         <!-- Page Header -->
@@ -24,24 +21,24 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_education.each do |project|%>
+        <%@privateproject_education.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
-                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%> 
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
+                
             </div>
         <%end%>
         
         </div>
         <!-- /.row -->
         <hr>
+
 
          <!-- Page Header -->
         <div class="row">
@@ -55,18 +52,16 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_health.each do |project|%>
+        <%@privateproject_health.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                  <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
-                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%>  
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
             </div>
         <%end%>
        
@@ -87,19 +82,16 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_poverty.each do |project|%>
+        <%@privateproject_poverty.each do |project|%>
             <div class="col-md-4 portfolio-item">
-
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                 <%if current_user==project.user%>
-                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+                <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
-                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%>   
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
             </div>
         <%end%>
        
@@ -119,18 +111,16 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_artsandculture.each do |project|%>
+        <%@privateproject_artsandculture.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                  <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%>  
             </div>
         <%end%>
        
@@ -151,19 +141,16 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_business.each do |project|%>
+        <%@privateproject_business.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                 <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
-                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%>  
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
             </div>
         <%end%>
        
@@ -184,18 +171,17 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_foodsecurity.each do |project|%>
+        <%@privateproject_foodsecurity.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                </a>
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                 <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-                <%end%>   
             </div>
         <%end%>
        
@@ -238,8 +224,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>
-                    <img src='/assets/logo.jpg'  height="30" width="30"/> Copyright &copy; Socialthon </p>
+                    <p>Copyright &copy; Your Website 2014</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -247,9 +232,3 @@
 
     </div>
     <!-- /.container -->
-
-
-
-
-
-

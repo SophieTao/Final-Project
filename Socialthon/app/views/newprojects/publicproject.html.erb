@@ -5,11 +5,7 @@
     <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
     
     <button type="button">      
-    <%=link_to "Public", new_user_newproject_path(current_user)%></button>  
-
-    <button type="button">      
-    <%=link_to "Private", new_user_newproject_path(current_user)%></button>  
-        
+    <%=link_to "Private", newprojects_privateproject_path%></button>  
 
         <!-- Page Header -->
         <div class="row">
@@ -30,8 +26,12 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more <br>
-                Creator: <%=project.creator%>
+                Creator: <%=project.creator%><br>
+                <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%>
             </div>
         <%end%>
         
@@ -59,7 +59,13 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                 Creator: <%=project.creator%><br>
+                 <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%>
+                
             </div>
         <%end%>
        
@@ -87,7 +93,12 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                 Creator: <%=project.creator%><br>
+                 <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%>
             </div>
         <%end%>
        
@@ -114,7 +125,12 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                 Creator: <%=project.creator%><br>
+                 <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%> 
             </div>
         <%end%>
        
@@ -142,7 +158,12 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                 Creator: <%=project.creator%><br>
+                 <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%> 
             </div>
         <%end%>
        
@@ -171,7 +192,12 @@
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                 Creator: <%=project.creator%><br>
+                 <%if current_user==project.user%>
+                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+
+                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
+                <%end%>
             </div>
         <%end%>
        
