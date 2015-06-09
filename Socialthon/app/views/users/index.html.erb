@@ -1,32 +1,5 @@
-
-<div id="navbar-main">
-      <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon icon-shield" style="font-size:30px; color: #34db93;"></span>
-          </button>
-          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color: #34db93;"></span></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to 'Home', users_path%></li>
-			<!-- <li> <a href="#about" class="smoothScroll"> About</a></li> -->
-			<li><%= link_to'Community', communities_path%></li>
-			<li><%= link_to 'Projects', projects_path%></li>
-			<li><%=link_to "NewProject Index", user_newprojects_path(current_user)%></li>
-			<li><%= link_to 'About Us', teams_path%></li>
-			
-			<!-- <li> <a href="#contact" class="smoothScroll"> Contact</a></li> -->
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-    </div>
-
-  
-  
-		<!-- ==== HEADERWRAP ==== -->
+<%=render 'nav'%>
+<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" id="home" name="home" style="background:url('http://williebester.net/wp-content/uploads/2012/11/Township-in-Khayelitsha.jpg') no-repeat center top; background-size: cover;">
 			<header class="clearfix">
 	  		 		<h1><span class="icon icon-shield"></span></h1>
