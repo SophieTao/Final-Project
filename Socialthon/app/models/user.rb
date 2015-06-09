@@ -4,5 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :newprojects
-  has_many :hashtags, through: :newprojects
+ 
 end
