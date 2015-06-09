@@ -1,8 +1,13 @@
 
-
-
 <p>
-<% if @newproject.url!=nil%><%= image_tag(@newproject.url, width: "30%", height: "30%")%><%end%><br>
+<% if @newproject.url!=nil%><%= image_tag(@newproject.url, width: "30%", height: "30%")%><%end%>
+
+<%= image_tag current_user.avatar.url %>
+<%= image_tag current_user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
+
+
+<br>
 Creator: <%=@newproject.creator%><br>
 Creator's Email: <%=@newproject.email%><br>
 Title: <%=@newproject.title%><br>
