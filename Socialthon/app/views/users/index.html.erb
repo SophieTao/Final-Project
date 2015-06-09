@@ -1,14 +1,285 @@
-<strong>SocialThon</strong>
-<style>
-img {
-  width: 100%;
- margin-top: -10px;
-}
-</style>
-<img><%= image_tag("https://capetowntownshiptour.files.wordpress.com/2010/03/pg-35-11597991.jpg") %></img>
+<<<<<<< HEAD
+<div id="navbar-main">
+      <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon icon-shield" style="font-size:30px; color: #34db93;"></span>
+          </button>
+          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color: #34db93;"></span></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Home', users_path%></li>
+			<!-- <li> <a href="#about" class="smoothScroll"> About</a></li> -->
+			<li><%= link_to'Community', communities_path%></li>
+			<li><%= link_to 'Projects', projects_path%></li>
+			
+			<li><%= link_to 'About Us', teams_path%></li>
+			
+			<!-- <li> <a href="#contact" class="smoothScroll"> Contact</a></li> -->
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    </div>
 
-<p><%= link_to 'Community', communities_path%></p>
-<p><%= link_to 'About Us', teams_path%></p>
-<p><%= link_to 'Projects', projects_path%></p>
-<strong>SocialThon</strong>
-<%=link_to "NewProject_index", user_newprojects_path(current_user)%>
+  
+  
+		<!-- ==== HEADERWRAP ==== -->
+	    <div id="headerwrap" id="home" name="home" style="background:url('http://williebester.net/wp-content/uploads/2012/11/Township-in-Khayelitsha.jpg') no-repeat center top; background-size: cover;">
+			<header class="clearfix">
+	  		 		<h1><span class="icon icon-shield"></span></h1>
+	  		 		<p>SocialThon</p>
+	  		 		<p>For Khayelitsha Community</p>
+	  		</header>	    
+	    </div><!-- /headerwrap -->
+
+		<section id="sixth" class="services text-center">
+  <a class="anchor" id="whycode"></a>
+
+  <div class="wrapper bg-colored "> 
+   <div class="container">
+    <div class="row">
+     <div class="span10 offset1">
+      <h2>Volunteering in Township</h2>
+      <div class="underline"><hr /></div>
+      <p>hello
+        <br />hi</p>
+        <div class="megawrapper">
+          <div class='videowrapper'>
+            <iframe id="youtube-pOG5uB8p8ew" class="youtube" width="970" height="546" src="http://www.youtube.com/embed/pOG5uB8p8ew" frameborder="0" allowfullscreen></iframe>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+		
+		<!-- ==== PORTFOLIO ==== -->
+		<div class="container" id="portfolio" name="portfolio">
+		<br>
+			<div class="row">
+				<br>
+				<h1 class="centered">Our Projects</h1>
+				<hr>
+				<br>
+				<br>
+			</div><!-- /row -->
+			<div class="container">
+			<div class="row">	
+			
+				<!-- PORTFOLIO IMAGE 1 -->
+				<div class="col-md-4 ">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="https://africaineblog.files.wordpress.com/2010/08/zz2_5240.jpg" alt="">
+							<figcaption>
+								<h5>Education</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', educations_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+				<!-- PORTFOLIO IMAGE 2 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+								<img class="img-responsive" src="http://travelblog.mtsobek.com/wp-content/uploads/2011/11/khayelitsha_township.jpg" alt="">
+							<figcaption>
+								<h5>Poverty</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', poverties_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+				
+				<!-- PORTFOLIO IMAGE 3 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="https://redcrossyouth.files.wordpress.com/2011/08/regina_central-african-republic-daniel-cima.jpg" alt="">
+							<figcaption>
+								<h5>Health</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', healths_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+
+				<!-- PORTFOLIO IMAGE 4 -->
+			<div class="row">	
+				<div class="col-md-4 ">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="http://groundup.org.za/sites/default/files/styles/article_image/public/field/image/children_lose_their_playground.JPG?itok=wIkyQcXo" alt="">
+							<figcaption>
+								<h5>Arts & Culture</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', arts_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+				
+				<!-- PORTFOLIO IMAGE 5 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+							<img class="img-responsive" src="http://3.bp.blogspot.com/-nbkjF53nRJM/ThxYtjSSMKI/AAAAAAAAACg/3IuibhY4i-c/s1600/01300470.jpg" alt="">
+							<figcaption>
+								<h5>Business</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', businesses_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+				
+				<!-- PORTFOLIO IMAGE 6 -->
+				<div class="col-md-4">
+			    	<div class="grid mask">
+						<figure>
+							
+								<img class="img-responsive" src="http://africagreenmedia.co.za/wp-content/uploads/2015/05/FS.jpg" alt="">
+							<figcaption>
+								<h5>Food Security</h5>
+								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg"><%= link_to 'Take a Look', securities_path%></a>
+							</figcaption><!-- /figcaption -->
+						</figure><!-- /figure -->
+			    	</div><!-- /grid-mask -->
+				</div><!-- /col -->
+			</div><!-- /row -->
+			<br>
+			<br>
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+		<!-- ==== SECTION DIVIDER4 ==== -->
+		<section class="section-divider textdivider divider4" style="background:url('https://www.prepbootstrap.com/Content/images/shared/shield/bg/divider4.jpg');">
+			<div class="container">
+				<h1>Flow Chart</h1>
+				<hr>
+				<p>Timeline</p>
+			</div><!-- container -->
+		</section><!-- section -->
+		
+		<!-- ==== BLOG ==== -->
+		<div class="container" id="blog" name="blog">
+		<br>
+			<div class="row">
+				<br>
+				<h1 class="centered">Our Community</h1>
+				<hr>
+				<br>
+				<br>
+			</div><!-- /row -->
+			
+			<div class="row">
+				<div class="col-lg-6 blog-bg">
+					<div class="col-lg-4 centered">
+					<br>
+						<p><img class="img img-circle" src="https://www.prepbootstrap.com/Content/images/shared/shield/team/team04.jpg" width="60px" height="60px"></p>
+						<h4>Meet Samantha</h4>
+					
+					</div>
+					<div class="col-lg-8 blog-content">
+						<h2>We Define Success</h2>
+						<p>Samantha is a sixth-grade girl.</p>
+						<p>She is great.</p>
+						<p><a href="#" class="icon icon-link"> Read More</a></p>
+						<br>
+					</div>
+				</div><!-- /col -->
+				
+				<div class="col-lg-6 blog-bg">
+					<div class="col-lg-4 centered">
+					<br>
+						<p><img class="img img-circle" src="https://www.prepbootstrap.com/Content/images/shared/shield/team/team03.jpg" width="60px" height="60px"></p>
+						<h4>Meet Michele</h4>
+					</div>
+					<div class="col-lg-8 blog-content">
+						<h2>A Beautiful Story</h2>
+						<p>Armed with insight, we embark on designing the right brand experience that engages the audience. It encompasses both the strategic direction and creative execution that solves a business problem and brings the brand to life.</p>
+						<p>In the create phase, the big idea is unleashed to the world through different media touchpoints. This is when we watch the audience fall in love all over again with our client’s brand.</p>
+						<p><a href="#" class="icon icon-link"> Read More</a></p>
+						<br>
+					</div>
+				</div><!-- /col -->
+			</div><!-- /row -->
+			<br>
+			<br>
+		</div><!-- /container -->
+
+		
+		<!-- ==== SECTION DIVIDER6 ==== -->
+		<section class="section-divider textdivider divider6" style="background:url('http://www.peaksquest.com/images/art/Kayelitsha.jpg');">
+			<div class="container">
+				<h1>Khayelitsha Community Center</h1>
+				<hr>
+				<p>Cape Town</p>
+				<p>+34 9884 4893</p>
+				<p><a class="icon icon-twitter" href="#"></a> | <a class="icon icon-facebook" href="#"></a></p>
+			</div><!-- container -->
+		</section><!-- section -->
+		
+		<div class="container" id="contact" name="contact">
+			<div class="row">
+			<br>
+				<h1 class="centered">THANKS FOR VISITING US</h1>
+				<hr>
+				<br>
+				<br>
+				<div class="col-lg-4">
+					<h3>Contact Information</h3>
+					<p><a href="https://www.facebook.com/groups/837424239656270/"><i class="fa fa-facebook-square fa-2x"></i></a>
+  <a href="https://twitter.com/SocialThon"><i class="fa fa-twitter-square fa-2x"></i></a>
+ <a href="https://plus.google.com/u/2/102540893630511551963/about"><i class="fa fa-google-plus-square fa-2x"></i></a>
+  <a href="https://www.youtube.com/channel/UCioWZa-eSxOPy4Y7Secwr5A"><i class="fa fa-youtube-square fa-2x"></i></a>
+
+					</p>
+				</div><!-- col -->
+				
+				<div class="col-lg-4">
+					<h3>Newsletter</h3>
+					<p>Register to our newsletter and be updated with the latests information regarding our services, offers and much more.</p>
+					<p>
+						<form class="form-horizontal" role="form">
+						  <div class="form-group">
+						    <label for="inputEmail1" class="col-lg-4 control-label"></label>
+						    <div class="col-lg-10">
+						      <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <label for="text1" class="col-lg-4 control-label"></label>
+						    <div class="col-lg-10">
+						      <input type="text" class="form-control" id="text1" placeholder="Your Name">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-lg-10">
+						      <button type="submit" class="btn btn-success">Sign in</button>
+						    </div>
+						  </div>
+					   </form><!-- form -->
+					</p>
+				</div><!-- col -->
+				
+				<div class="col-lg-4">
+					<h3>Support Us</h3>
+					<p>Socialthon needs your help.</p>
+				</div><!-- col -->
+
+			</div><!-- row -->
+		
+		</div><!-- container -->
+
+		<div id="footerwrap">
+			<div class="container">
+				<h4>Created by <a href="http://blacktie.co">BlackTie.co</a> - Copyright 2014</h4>
+			</div>
+		</div>
+
+
+>>>>>>> ac587339bbc50b622718922cdfdaa393eaa7bd13

@@ -8,10 +8,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
 resources :users do
-  resources :newprojects do
-      resources :hashtags 
-    end
+  resources :newprojects 
   end
+
 
 resources :users
 resources :communities
@@ -25,6 +24,19 @@ get 'newprojects/individual'
 
 
   # You can have the root of your site routed with "root"
+
+resources :communities, only: [:index]
+resources :teams, only: [:index]
+resources :projects, only: [:index]
+resources :educations, only: [:index]
+resources :businesses, only: [:index]
+resources :securities, only: [:index]
+resources :healths, only: [:index]
+resources :arts, only: [:index]
+resources :poverties, only: [:index]
+
+ # You can have the root of your site routed with "root"
+
    root 'users#index'
 
   # Example of regular route:
