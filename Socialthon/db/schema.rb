@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608153708) do
+ActiveRecord::Schema.define(version: 20150608201132) do
 
   create_table "hashtags", force: :cascade do |t|
     t.string   "categorytext"
@@ -33,8 +33,14 @@ ActiveRecord::Schema.define(version: 20150608153708) do
     t.boolean  "individual"
     t.string   "email"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.boolean  "education"
+    t.boolean  "health"
+    t.boolean  "poverty"
+    t.boolean  "artsandculture"
+    t.boolean  "business"
+    t.boolean  "foodsecurity"
   end
 
   add_index "newprojects", ["user_id"], name: "index_newprojects_on_user_id"

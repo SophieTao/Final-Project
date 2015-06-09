@@ -17,6 +17,31 @@
 	</p>
 
 	<p>
+	Category<br>
+	<p>Please select the relevant categories </p>
+
+	<%= f.label "Education" %> 
+	<%=f.check_box :education%>
+
+	<%= f.label "Health" %> 
+	<%= f.check_box :health%>
+
+	<%= f.label "Poverty" %> 
+	<%= f.check_box :poverty%>
+
+	<%= f.label "Arts & Culture" %> 
+	<%= f.check_box :artsandculture%>
+
+	<%= f.label "Business" %> 
+	<%= f.check_box :business%>
+
+	<%= f.label "Food Security" %> 
+	<%= f.check_box :foodsecurity %>
+	<br>
+	</p>
+
+
+	<p>
 	<%= f.label :description %> <br>
 	<%= f.text_area :description %> 
 	</p>
@@ -28,12 +53,14 @@
 
 	<p>
 	<br><%= f.label "Public"%> </br>
-	<%=f.check_box :public, {:checked=>true}%>
+	<%=f.check_box :public%>
 	</p>
+
+	
 
 	<p>
 	<br><%= f.label "Individual"%> </br>
-	<%=f.check_box :individual, {:checked=>true}%>
+	<%=f.check_box :individual%>
 	</p>
 
 	<p>
