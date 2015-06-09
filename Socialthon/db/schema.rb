@@ -11,8 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150608201132) do
+
+  create_table "communities", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "hashtags", force: :cascade do |t|
     t.string   "categorytext"
@@ -45,13 +49,6 @@ ActiveRecord::Schema.define(version: 20150608201132) do
   end
 
   add_index "newprojects", ["user_id"], name: "index_newprojects_on_user_id"
-=======
-ActiveRecord::Schema.define(version: 20150608155928) do
-
-  create_table "communities", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "projects", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -62,7 +59,6 @@ ActiveRecord::Schema.define(version: 20150608155928) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
->>>>>>> ef3f6f8b25299bc055c80c1f02942ac9db26ce14
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

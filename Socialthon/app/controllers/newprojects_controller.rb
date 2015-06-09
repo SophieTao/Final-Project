@@ -30,7 +30,7 @@ class NewprojectsController < ApplicationController
         @newproject_business<<newproject 
       end
 
-      if newproject.business==true
+      if newproject.foodsecurity==true
         @newproject_foodsecurity<<newproject 
       end   
     end
