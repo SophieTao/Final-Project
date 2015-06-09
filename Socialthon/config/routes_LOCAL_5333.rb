@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-<<<<<<< HEAD
 resources :users do
   resources :newprojects do
       resources :hashtags 
@@ -15,12 +14,6 @@ resources :users do
 
 
 
-=======
-resources :users
-resources :communities
-resources :teams
-resources :projects
->>>>>>> ef3f6f8b25299bc055c80c1f02942ac9db26ce14
   # You can have the root of your site routed with "root"
    root 'users#index'
 
