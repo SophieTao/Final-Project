@@ -7,7 +7,7 @@ class NewprojectsController < ApplicationController
     @newproject_business=[]
     @newproject_foodsecurity=[]
 
-  	@newprojects=Newproject.all 
+  	@newprojects=current_user.newprojects
     
     @newprojects.each do |newproject|
       if newproject.education==true 
@@ -108,9 +108,103 @@ class NewprojectsController < ApplicationController
 		  redirect_to user_newprojects_path(current_user)
   end
 
+  def publicproject
+    @publicprojects=[]
+    @newprojects=Newproject.all
+    @newprojects.each do |project|
+      if project.public==true 
+        @publicprojects<<project
+      end
+    end
+    @publicproject_education=[]
+    @publicproject_health=[]
+    @publicproject_poverty=[]
+    @publicproject_artsandculture=[]
+    @publicproject_business=[]
+    @publicproject_foodsecurity=[]
+    @publicprojects.each do |publicproject|
+      if publicproject.education==true
+        @publicproject_education<<publicproject
+      end
+
+      if publicproject.health==true
+        @publicproject_health<<publicproject
+      end
+
+       if publicproject.poverty==true
+        @publicproject_poverty<<publicproject
+      end
+
+      if publicproject.artsandculture==true
+        @publicproject_artsandculture<<publicproject
+      end
+
+      if publicproject.business==true
+        @publicproject_business<<publicproject
+      end
+
+      if publicproject.foodsecurity==true
+        @publicproject_foodsecurity<<publicproject
+      end
+    end
+
+  end
+
+  def privateproject
+    @privateprojects=[]
+    @newprojects=current_user.projects
+
+    @newprojects.each do |newproject|
+      if newproject.public==false
+        @privateprojects<<newproject 
+      end
+    end
+
+    @privateproject_education=[]
+    @privateproject_health=[]
+    @privateproject_poverty=[]
+    @privateproject_artsandculture=[]
+    @privateproject_business=[]
+    @privateproject_foodsecurity=[]
+
+    @privateprojects.each do |privateproject|
+      if privateproject.education==true
+        @privateproject_education<<privateproject
+      end
+
+      if privateproject.health==true
+        @privateproject_health<<privateproject
+      end
+
+       if privateproject.poverty==true
+        @privateproject_poverty<<privateproject
+      end
+
+      if privateproject.artsandculture==true
+        @privateproject_artsandculture<<privateproject
+      end
+
+      if privateproject.business==true
+        @privateproject_business<<privateproject
+      end
+
+      if privateproject.foodsecurity==true
+        @privateproject_foodsecurity<<privateproject
+      end
+    end
+
+  end
+
+  def team
+    @newproject=Newproject.new
+  end
+
+
+
   private
 	def newproject_params
-			params.require(:newproject).permit(:creator,:title, :category, :description, :public, :individual, :email, :education, :health, :poverty, :artsandculture, :business,:foodsecurity)
+			params.require(:newproject).permit(:creator,:title, :category, :description, :public, :individual, :email, :education, :health, :poverty, :artsandculture, :business,:foodsecuritym, :url, :member1, :member2, :member3, :member4, :member5, :team)
+
 	end
 
 

@@ -1,12 +1,11 @@
-   <!-- Page Content -->
-    <div class="container">
-    <h1>Your Own Projects</h1>
+<div class="container">
+    <h1>Your Public Projects</h1>
 
     <button type="button">      
-    <%=link_to "New Project", new_user_newproject_path(current_user)%></button>  
-
+    <%=link_to "New Project",new_user_newproject_path(current_user)%></button>  
+    
     <button type="button">      
-    <%=link_to "Public", newprojects_publicproject_path%></button>  
+    <%=link_to "Public", new_user_newproject_path(current_user)%></button>  
 
     <button type="button">      
     <%=link_to "Private", new_user_newproject_path(current_user)%></button>  
@@ -24,20 +23,22 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_education.each do |project|%>
+        <%@publicproject_education.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
                 <p><%=project.description%></p><br>
-                button:more 
+                button:more <br>
+                Creator: <%=project.creator%>
             </div>
         <%end%>
         
         </div>
         <!-- /.row -->
         <hr>
+
 
          <!-- Page Header -->
         <div class="row">
@@ -51,7 +52,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_health.each do |project|%>
+        <%@publicproject_health.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -79,9 +80,8 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_poverty.each do |project|%>
+        <%@publicproject_poverty.each do |project|%>
             <div class="col-md-4 portfolio-item">
-
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
@@ -107,7 +107,7 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_artsandculture.each do |project|%>
+        <%@publicproject_artsandculture.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
@@ -135,10 +135,9 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_business.each do |project|%>
+        <%@publicproject_business.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -164,9 +163,10 @@
 
         <!-- Projects Row -->
         <div class="row">
-        <%@newproject_foodsecurity.each do |project|%>
+        <%@publicproject_foodsecurity.each do |project|%>
             <div class="col-md-4 portfolio-item">
                     <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                </a>
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -222,9 +222,3 @@
 
     </div>
     <!-- /.container -->
-
-
-
-
-
-

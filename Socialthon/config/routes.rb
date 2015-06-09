@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'hashtags/show'
 
-  get 'newprojects/index'
+  #get 'newprojects/index'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
@@ -17,6 +17,10 @@ resources :users
 resources :communities
 resources :teams
 resources :projects
+
+get 'newprojects/publicproject'
+get 'newprojects/privateproject'
+get 'newprojects/team'
 
   # You can have the root of your site routed with "root"
    root 'users#index'

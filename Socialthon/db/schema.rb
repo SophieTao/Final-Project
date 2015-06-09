@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150608201132) do
+ActiveRecord::Schema.define(version: 20150609143836) do
 
   create_table "communities", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(version: 20150608201132) do
     t.boolean  "artsandculture"
     t.boolean  "business"
     t.boolean  "foodsecurity"
+    t.string   "url"
+    t.string   "member1"
+    t.string   "member2"
+    t.string   "member3"
+    t.string   "member4"
+    t.string   "member5"
+    t.boolean  "team"
   end
 
   add_index "newprojects", ["user_id"], name: "index_newprojects_on_user_id"
