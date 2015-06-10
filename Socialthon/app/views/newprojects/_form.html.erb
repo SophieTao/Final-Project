@@ -60,25 +60,39 @@
     </p>
 
 
-    <p>
+
+     <p>
     	<div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center">
-    	<div class=categorytitle><strong>Work on the project as team or individual </strong> Please select one</div>
+    	<div class=categorytitle><strong>Make the project PUBLIC?</strong></div>
+    	<label class="radio-inline">
+  			<%= f.check_box :public %>
+			<%= f.label "Public" %> 
+		</label>
 	</div>
-	
-    <div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
+
+	</div>
+
+
+
+    <p>
+    	<div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
+    	<div class=categorytitle><strong>Work on the project as team or individual?</strong> Please select one</div>
+    	  <div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
 		<label class="radio-inline">
   			<%= f.check_box :team %>
 			<%= f.label "Team" %> 
-		</label>
-
-		<label class="radio-inline">
-  			<%= f.check_box :individual %>
+			<%= f.check_box :individual %>
 			<%= f.label "Individual" %> 
 		</label>
+		<br>
+
+	</div>
 	</div>
 
-	<div class="col-md-4 col-md-offset-4 col-md-offset-4">
+
+	<div class="col-md-8 col-md-offset-2 col-md-offset-2" align="center">
 		If you work on the project as team, please indicate how many team members you are working with.
+		<div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center">
 		<select class="form-control"  align="center">
   			<option>1</option>
   			<option>2</option>
@@ -86,6 +100,7 @@
   			<option>4</option>
   			<option>5</option>
 		</select>
+		</div>
 	</div>
 
  <div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
