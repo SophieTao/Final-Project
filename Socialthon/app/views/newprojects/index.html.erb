@@ -16,7 +16,7 @@
         <div class="row">
         <%@newproject_education.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                <%= image_tag(project.url, width: 360, height: 230)%>
+                
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -47,7 +47,7 @@
         <div class="row">
         <%@newproject_health.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                    
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -79,8 +79,6 @@
         <div class="row">
         <%@newproject_poverty.each do |project|%>
             <div class="col-md-4 portfolio-item">
-
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -111,7 +109,7 @@
         <div class="row">
         <%@newproject_artsandculture.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -143,7 +141,6 @@
         <div class="row">
         <%@newproject_business.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
 
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
@@ -176,7 +173,7 @@
         <div class="row">
         <%@newproject_foodsecurity.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>

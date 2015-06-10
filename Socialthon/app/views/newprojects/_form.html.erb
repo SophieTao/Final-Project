@@ -1,5 +1,5 @@
 
-<%= form_for([current_user, @newproject], :url => users_path, :html => { :multipart => true }) do |f| %>
+<%= form_for([current_user, @newproject]) do |f| %>
 
 	<p>
 	<%= f.label "Creator of the Project" %> <br>
@@ -10,19 +10,7 @@
 	<%= f.label :title %> <br>
 	<%= f.text_area :title %> 
 	</p>
-
-	<p>
-	<%= f.label "Image for Your Project" %> <br>
-	<%= f.text_area :url%> 
-	</p>
-
-	<p>
-		<%=f.file_field :avatar %>
-	</p>
-	
   
-
-
 	<p>
 	Category<br>
 	<p>Please select the relevant categories </p>

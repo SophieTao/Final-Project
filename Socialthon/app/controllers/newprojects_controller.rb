@@ -1,5 +1,7 @@
 class NewprojectsController < ApplicationController
    before_action :authenticate_user!
+
+
   def index
     @newproject_education=[]
     @newproject_health=[]

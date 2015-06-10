@@ -11,8 +11,8 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to 'Home', users_path%></li>
-      <li><%= link_to'Community', communities_path%></li>
-      <li><%= link_to 'Projects', projects_path%></li>
+            <li><%= link_to'Community', communities_path%></li>
+            <li><%= link_to 'Projects', projects_path%></li>
       <%user=current_user%>
       <%if user!=nil%>
         <li><%=link_to "NewProject Index", user_newprojects_path(current_user)%></li>
