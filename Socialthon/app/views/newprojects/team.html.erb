@@ -1,4 +1,6 @@
 <%=render 'nav'%> 
+
+
 <div class="container">
     <h1>Your Team Projects</h1>
 
@@ -23,7 +25,6 @@
                 Creator: <%=project.creator%><br>
                 <%if current_user==project.user%>
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
-
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
                 <%end%>
             </div>

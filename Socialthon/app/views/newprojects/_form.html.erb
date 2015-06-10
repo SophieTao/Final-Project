@@ -1,98 +1,102 @@
 
 <%= form_for([current_user, @newproject]) do |f| %>
 
-	<p>
-	<%= f.label "Creator of the Project" %> <br>
-	<%= f.text_area :creator%> 
-	</p>
+ <div class="form-group">
+ 	<p>
+    <div class="col-md-4 col-md-offset-4" align="center"><%= f.text_field :creator, placeholder: "Creator", class: "form-control" %></div>
+    <br>
+    </p>
 
 	<p>
-	<%= f.label :title %> <br>
-	<%= f.text_area :title %> 
-	</p>
-  
-	<p>
-	Category<br>
-	<p>Please select the relevant categories </p>
+    <div class="col-md-4 col-md-offset-4" align="center"><%= f.text_field :email, placeholder: "Creator's Email", class: "form-control" %></div>
+    <br>
+    </p>
 
-	<%= f.label "Education" %> 
-	<%=f.check_box :education%>
+    <p>
+    <div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center"><%= f.text_field :title, placeholder: "Title of the Project", class: "form-control" %></div>
+    </p><br>
 
-	<%= f.label "Health" %> 
-	<%= f.check_box :health%>
-
-	<%= f.label "Poverty" %> 
-	<%= f.check_box :poverty%>
-
-	<%= f.label "Arts & Culture" %> 
-	<%= f.check_box :artsandculture%>
-
-	<%= f.label "Business" %> 
-	<%= f.check_box :business%>
-
-	<%= f.label "Food Security" %> 
-	<%= f.check_box :foodsecurity %>
-	<br>
-	</p>
-
-
-	<p>
-	<%= f.label :description %> <br>
-	<%= f.text_area :description %> 
-	</p>
-
-	<p>
-	<%= f.label :email %> <br>
-	<%= f.text_area :email %> 
-	</p>
-
-	<p>
-	<br><%= f.label "Do you want to make your project public?"%> </br>
-	<%=f.check_box :public%>
-	</p>
-
+	<p> 
+	<div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center">
+    	<div class=categorytitle><strong>Category: </strong> Please select the relevant categories</div>
+	</div>
 	
+		<div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
+			<label class="checkbox-inline">
+				<%=f.check_box :education%>
+				<%= f.label "Education" %> 
+			</label>
 
-	<p>
-	<br><%= f.label "Do you want to work the project individually or as a group?"%> </br>
-	<%= f.label "Individual" %> 
-	<%= f.check_box :individual%><br>
+			<label class="checkbox-inline">
+				<%= f.check_box :health%>
+				<%= f.label "Health" %> 
+			</label>
 
-	<%= f.label "Team" %> 
-	<%= f.check_box :team%><br>
-	</p>
+			<label class="checkbox-inline">
+				<%= f.check_box :poverty%>
+				<%= f.label "Poverty" %> 
+			</label>
 
-	<p>
-	<br><%= f.label "If you already have teammates, please write down their names."%> </br>
-	Maximum:5 <br>
-	<p>
-	<%= f.label "Member 1"%> <br>
-	<%= f.text_area :member1%> 
-	</p>
+			<label class="checkbox-inline">
+				<%= f.check_box :artsandculture%>
+				<%= f.label "Arts & Culture" %> 
+			</label>
 
-	<p>
-	<%= f.label "Member 2" %> <br>
-	<%= f.text_area :member2 %> 
-	</p>
+			<label class="checkbox-inline">
+				<%= f.check_box :business%>
+				<%= f.label "Business" %> 
+			</label>
 
-	<p>
-	<%= f.label "Member 3" %> <br>
-	<%= f.text_area :member3%> 
-	</p>
-
-	<p>
-	<%= f.label "Member 4" %> <br>
-	<%= f.text_area :member4%> 
+			<label class="checkbox-inline">
+				<%= f.check_box :foodsecurity %>
+				<%= f.label "Food Security" %> 
+			</label>
+		</div>
 	</p>
 
-	<p>
-	<%= f.label "Member 5" %> <br>
-	<%= f.text_area :member5%> 
-	</p>
-	</p>
-	<p>
-	<%= f.submit %>
-	</p>
+
+    <div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center"><%= f.text_area :description, placeholder: "Description of your project", class: "form-control" %></div>
+    <br>
+    </p>
+
+
+    <p>
+    	<div class="col-md-4 col-md-offset-4 col-md-offset-4" align="center">
+    	<div class=categorytitle><strong>Work on the project as team or individual </strong> Please select one</div>
+	</div>
+	
+    <div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
+		<label class="radio-inline">
+  			<%= f.check_box :team %>
+			<%= f.label "Team" %> 
+		</label>
+
+		<label class="radio-inline">
+  			<%= f.check_box :individual %>
+			<%= f.label "Individual" %> 
+		</label>
+	</div>
+
+	<div class="col-md-4 col-md-offset-4 col-md-offset-4">
+		If you work on the project as team, please indicate how many team members you are working with.
+		<select class="form-control"  align="center">
+  			<option>1</option>
+  			<option>2</option>
+  			<option>3</option>
+  			<option>4</option>
+  			<option>5</option>
+		</select>
+	</div>
+
+ <div class="col-md-6 col-md-offset-3 col-md-offset-3" align="center">
+<button class="btn btn-success" type="submit">SUBMIT</button>
+
+
+</div>
+
+ 
+
+ </div>
 
 <% end %>
 

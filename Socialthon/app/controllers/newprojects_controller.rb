@@ -63,9 +63,7 @@ class NewprojectsController < ApplicationController
 
 
   def new 
-
   	@newproject=Newproject.new
-
   end
 
   def edit

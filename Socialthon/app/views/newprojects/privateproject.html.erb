@@ -16,17 +16,17 @@
         <div class="row">
         <%@privateproject_education.each do |project|%>
             <div class="col-md-4 portfolio-item">
-                <h3>
-                    <%=link_to project.title, user_newproject_path(current_user,project.id)%>
-                </h3>
-                <p><%=project.description%></p><br>
-                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
+                <div class="jumbotron">
+                    <h3>
+                        <%=link_to project.title, user_newproject_path(current_user,project.id)%>
+                    </h3>
+                    <p><%=project.description%></p><br>
+                    <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
-                <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
-                
-            </div>
-        <%end%>
-        
+                    <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
+                </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
@@ -46,6 +46,7 @@
         <div class="row">
         <%@privateproject_health.each do |project|%>
             <div class="col-md-4 portfolio-item">
+                <div class="jumbotron">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -53,9 +54,9 @@
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
-            </div>
-        <%end%>
-       
+            </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
@@ -75,6 +76,7 @@
         <div class="row">
         <%@privateproject_poverty.each do |project|%>
             <div class="col-md-4 portfolio-item">
+                <div class="jumbotron">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -82,9 +84,10 @@
                 <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
-            </div>
-        <%end%>
-       
+
+            </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
@@ -103,6 +106,7 @@
         <div class="row">
         <%@privateproject_artsandculture.each do |project|%>
             <div class="col-md-4 portfolio-item">
+                <div class="jumbotron">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -110,9 +114,10 @@
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-            </div>
-        <%end%>
-       
+  
+            </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
@@ -132,6 +137,7 @@
         <div class="row">
         <%@privateproject_business.each do |project|%>
             <div class="col-md-4 portfolio-item">
+                <div class="jumbotron">
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
                 </h3>
@@ -139,9 +145,9 @@
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button> 
-            </div>
-        <%end%>
-       
+           </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
@@ -161,6 +167,7 @@
         <div class="row">
         <%@privateproject_foodsecurity.each do |project|%>
             <div class="col-md-4 portfolio-item">
+                <div class="jumbotron">
                 </a>
                 <h3>
                     <%=link_to project.title, user_newproject_path(current_user,project.id)%>
@@ -169,9 +176,9 @@
                  <button type="button">  <%=link_to "Edit", edit_user_newproject_path(current_user,project.id)%></button>  
 
                 <button type="button"> <%=link_to "Delete", user_newproject_path(current_user,project.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>  
-            </div>
-        <%end%>
-       
+            </div> 
+             </div> 
+            <%end%>
         </div>
         <!-- /.row -->
         <hr>
