@@ -1,33 +1,27 @@
 <div id="navbar-main">
-      <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon icon-shield" style="font-size:30px; color: #34db93;"></span>
-          </button>
-          <a class="navbar-brand hidden-xs hidden-sm" href="#home"><span class="icon icon-shield" style="font-size:18px; color: #34db93;"></span></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to 'Home', users_path%></li>
-			<!-- <li> <a href="#about" class="smoothScroll"> About</a></li> -->
-			<li><%= link_to'Community', communities_path%></li>
-			<li><%= link_to 'Projects', projects_path%></li>
-      <%user=current_user%>
-      <%if user!=nil%>
-        <li><%=link_to "Apply", user_newprojects_path(current_user)%></li>
-      <%else%>
-               <li><%=link_to "Apply", user_session_path%></li>
-       <%end%>
-			<!-- <li> <a href="#portfolio" class="smoothScroll"> Portfolio</a></li> -->
-			<li><%= link_to 'About Us', teams_path%></li>
-			<!-- <li> <a href="#contact" class="smoothScroll"> Contact</a></li> -->
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
-    </div>
-
+<nav class="navbar navbar-default navbar-fixed-top"> 
+  <div class="container-fluid"> 
+    <div class="navbar-header"> 
+      <a class="navbar-brand" href="#">SocialThon</a> 
+    </div> 
+    <div> 
+      <ul class="nav navbar-nav"> 
+           <li><%= link_to 'Home', users_path%></li>
+      <li><%= link_to'Community', communities_path%></li>
+      <li><%= link_to 'Projects', projects_path%></li>
+  <%user=current_user%>
+  <%if user!=nil%>
+    <li><%=link_to "Apply", user_newprojects_path(current_user)%></li>
+  <%else%>
+           <li><%=link_to "Apply", user_session_path%></li>
+   <%end%>
+ 
+      <li><%= link_to 'About Us', teams_path%></li>
+      </ul> 
+    </div> 
+  </div> 
+</nav> 
+</head>
 
 <link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -35,6 +29,7 @@
       h1 {
         font-family: 'Slabo 27px', serif;
   text-align: center;
+  font-weight: bold; 
   font-size: 80px;
       }
       h2 {
@@ -45,6 +40,11 @@
 h4 {font-family: 'Lato', sans-serif;
   text-align: left;
   font-size: 20px;
+}
+h6 {font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: black;
 }
  <body style = "background-color:#f5f5f5"> 
 </style>

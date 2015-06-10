@@ -1,14 +1,21 @@
-<%=render 'nav'%>
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <script src="/assets/jquery.js"></script>
       <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css' rel='stylesheet' type='text/css'>
    <body>
-    
+      <%=render 'nav'%>
 
-     <h1>Projects</h1>
-      <section class="section-divider textdivider divider1" style="background:url('http://i.imgur.com/8HnUL9K.jpg') no-repeat center top; background-size: cover;">
+   
+      <section class="section-divider textdivider divider3" style="background:url('http://images.fineartamerica.com/images-medium-large/1-cape-cottage-south-africa-4436-jessie-meier.jpg') no-repeat center top; background-size: cover;">
+      <div class="container">
+        <h1 class="centered">PROJECTS</h1>
+        <hr>
+      
+      </div><!-- container -->
+    </section>
+
+      <section class="section-divider textdivider divider1" style="background:url('http://2.bp.blogspot.com/_QmV_kRlD7q8/S-I76MNZRsI/AAAAAAAAJns/zK0VgICqFSM/s1600/SummerStorm.jpg') no-repeat center top; background-size: cover;">
          <section data-toggle="modal" data-target="#myModal" href="#" class="box isotope-item education">
             <div class="container">
                <h1>Education</h1>
@@ -18,13 +25,84 @@
          </section>
       </section>
       </figure> 
-      
+
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
          <div class="modal-dialog">
             <div class="modal-content">
                <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
                   <h4 class="modal-title">Education</h4>
+               </div>
+               <div class="modal-body">
+                  <p><img class="img-responsive" src="http://i.imgur.com/AKx159S.jpg" alt=""></p>
+                  <p>Problems: 1.Shortage of educational opportunities
+                     2. Sciences and technology lap
+                     3. Drop out leaners.
+                     Cause the challenge: Each School has a large number of students.
+                     Less pass rate in Sciences and technology because of less pretcails in high school and college.
+                     No moretivel speaks in school around final Exam time or friends infuse.
+                     Why should it be fixing: To educate more young people and give them skill of life which is 
+                     education. People with education have more chances in life and with this lap being build it will help 
+                     them to understand more about the subject him/her doing in school. 
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      </div><!-- container --> 
+      </section><!-- section --> 
+       <br>  <br>  <br> 
+       
+      <div class="col-lg-4 centered">
+     
+         <img class="img img-circle" src="http://i.imgur.com/zhpU8aa.png" height="120px" width="120px" alt=""> 
+         <br> 
+
+         <h4><b>Project 1</b></h4>
+         <p>The Community Library consists of seven staff members and a limited space and stock to serve such huge communities. They only have five smartcape computers for public to use, with 45 minutes session per person. They have a very small corner for youth called Teen Zone, with no computers nor space for youth activities. They also have a nice small section for kids, where they do their story telling and other activities, in this area they can only accommodate a small amount of kids.</p>
+      </div>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/zhpU8aa.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 2</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/zhpU8aa.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 3</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      </div>
+    <!--   <p><a href="educations#index" class="btn btn-success">Learn More</a></p>
+      <p><%= link_to 'Learn More', educations_path%></p> -->
+
+      <section class="section-divider textdivider divider1" style="background:url('http://i.imgur.com/27Rbdbi.jpg?1') no-repeat center top; background-size: cover;">
+         <section data-toggle="modal" data-target="#myModal2" href="#" class="box isotope-item business">
+            <div class="container">
+               <h1>Business</h1>
+               <hr>
+               <p>The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.</p>
+            </div>
+         </section>
+      </section>
+      </figure> 
+
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                  <h4 class="modal-title">Business</h4>
                </div>
                <div class="modal-body">
                   <p><img class="img-responsive" src="https://www.prepbootstrap.com/Content/images/shared/shield/portfolio/folio01.jpg" alt=""></p>
@@ -51,47 +129,169 @@
       </div><!-- container --> 
       </section><!-- section --> 
        <br>  <br>  <br> 
+       
       <div class="col-lg-4 centered">
-         <img class="img img-circle" src="http://www.morethanprinting.co/images/educationIcon.png" height="120px" width="120px" alt=""> 
+     
+         <img class="img img-circle" src="http://i.imgur.com/rCA6xWx.png" height="120px" width="120px" alt=""> 
          <br> 
+
          <h4><b>Project 1</b></h4>
          <p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
       </div>
+      </div>
       <!-- col-lg-3 --> 
       <div class="col-lg-4 centered">
-         <img class="img img-circle" src="http://www.morethanprinting.co/images/educationIcon.png" height="120px" width="120px" alt=""> 
+         <img class="img img-circle" src="http://i.imgur.com/rCA6xWx.png" height="120px" width="120px" alt=""> 
          <br> 
          <h4><b>Project 2</b></h4>
          <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
       </div>
       <!-- col-lg-3 --> 
       <div class="col-lg-4 centered">
-         <img class="img img-circle" src="http://www.morethanprinting.co/images/educationIcon.png" height="120px" width="120px" alt=""> 
+         <img class="img img-circle" src="http://i.imgur.com/rCA6xWx.png" height="120px" width="120px" alt=""> 
          <br> 
          <h4><b>Project 3</b></h4>
          <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
       </div>
       </div>
-    <!--   <p><a href="educations#index" class="btn btn-success">Learn More</a></p>
-      <p><%= link_to 'Learn More', educations_path%></p> -->
-      <p><strong>Business</strong></p>
-      <p><strong>Project1</strong>
-         <strong>Project2</strong>
-         <strong>Project3</strong>
-      </p>
-      <p><%= link_to 'Learn More', businesses_path%></p>
       <p><strong>Food Security</strong></p>
-      <p><strong>Project1</strong>
-         <strong>Project2</strong>
-         <strong>Project3</strong>
-      </p>
-      <p><%= link_to 'Learn More', securities_path%></p>
+       <section class="section-divider textdivider divider1" style="background:url('http://i.imgur.com/5h4cUyo.jpg') no-repeat center top; background-size: cover;">
+         <section data-toggle="modal" data-target="#myModal3" href="#" class="box isotope-item arts & culture">
+            <div class="container">
+               <h1>Arts & Culture</h1>
+               <hr>
+               <p>The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.</p>
+            </div>
+         </section>
+      </section>
+      </figure> 
+
+      <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                  <h4 class="modal-title">Arts & Culture</h4>
+               </div>
+               <div class="modal-body">
+                  <p><img class="img-responsive" src="https://www.prepbootstrap.com/Content/images/shared/shield/portfolio/folio01.jpg" alt=""></p>
+                  <p>Problems: 1.Shortage of educational opportunities
+                     2. Sciences and technology lap
+                     3. Drop out leaners.
+                     Cause the challenge: Each School has a large number of students.
+                     Less pass rate in Sciences and technology because of less pretcails in high school and college.
+                     No moretivel speaks in school around final Exam time or friends infuse.
+                     Why should it be fixing: To educate more young people and give them skill of life which is 
+                     education. People with education have more chances in life and with this lap being build it will help 
+                     them to understand more about the subject him/her doing in school. 
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      </div><!-- container --> 
+      </section><!-- section --> 
+       <br>  <br>  <br> 
+       
+      <div class="col-lg-4 centered">
+     
+         <img class="img img-circle" src="http://i.imgur.com/NxvDPsT.gif" height="120px" width="120px" alt=""> 
+         <br> 
+
+         <h4><b>Project 1</b></h4>
+         <p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
+      </div>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/NxvDPsT.gif" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 2</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/NxvDPsT.gif" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 3</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      </div>
       <p><strong>Health</strong></p>
-      <p><strong>Project1</strong>
-         <strong>Project2</strong>
-         <strong>Project3</strong>
-      </p>
-      <p><%= link_to 'Learn More', healths_path%></p>
+      <section class="section-divider textdivider divider1" style="background:url('http://i.imgur.com/5h4cUyo.jpg?1') no-repeat center top; background-size: cover;">
+         <section data-toggle="modal" data-target="#myModal4" href="#" class="box isotope-item health">
+            <div class="container">
+               <h1>Health</h1>
+               <hr>
+               <p>The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.</p>
+            </div>
+         </section>
+      </section>
+      </figure> 
+
+      <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                  <h4 class="modal-title">Health</h4>
+               </div>
+               <div class="modal-body">
+                  <p><img class="img-responsive" src="https://www.prepbootstrap.com/Content/images/shared/shield/portfolio/folio01.jpg" alt=""></p>
+                  <p>Problems: 1.Shortage of educational opportunities
+                     2. Sciences and technology lap
+                     3. Drop out leaners.
+                     Cause the challenge: Each School has a large number of students.
+                     Less pass rate in Sciences and technology because of less pretcails in high school and college.
+                     No moretivel speaks in school around final Exam time or friends infuse.
+                     Why should it be fixing: To educate more young people and give them skill of life which is 
+                     education. People with education have more chances in life and with this lap being build it will help 
+                     them to understand more about the subject him/her doing in school. 
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      </div><!-- container --> 
+      </section><!-- section --> 
+       <br>  <br>  <br> 
+       
+      <div class="col-lg-4 centered">
+     
+         <img class="img img-circle" src="http://i.imgur.com/DsEyDi7.png" height="120px" width="120px" alt=""> 
+         <br> 
+
+         <h4><b>Project 1</b></h4>
+         <p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
+      </div>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/DsEyDi7.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 2</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/DsEyDi7.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 3</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      </div>
       <p><strong>Arts & Culture</strong></p>
       <p><strong>Project1</strong>
          <%=markdown"As we know Khayelitsha has high number young inside it, which has 6 different cultures delimiting.
@@ -111,11 +311,151 @@
       </p>
       <p><%= link_to 'Learn More', arts_path%></p>
       <p><strong>Poverty</strong></p>
-      <p><strong>Project1</strong>
-         <strong>Project2</strong>
-         <strong>Project3</strong>
-      </p>
-      <p><%= link_to 'Learn More', poverties_path%></p>
-      <p><%= link_to 'Home', users_path%></p>
+       <section class="section-divider textdivider divider1" style="background:url('http://milliwall.com/wp-content/uploads/2015/03/Watercolor-Painting-Landscape-43-HD-Wallpaper.jpg') no-repeat center top; background-size: cover;">
+         <section data-toggle="modal" data-target="#myModal5" href="#" class="box isotope-item poverty">
+            <div class="container">
+               <h1>Poverty</h1>
+               <hr>
+               <p>The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.</p>
+            </div>
+         </section>
+      </section>
+      </figure> 
+
+      <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                  <h4 class="modal-title">Poverty</h4>
+               </div>
+               <div class="modal-body">
+                  <p><img class="img-responsive" src="https://www.prepbootstrap.com/Content/images/shared/shield/portfolio/folio01.jpg" alt=""></p>
+                  <p>Problems: 1.Shortage of educational opportunities
+                     2. Sciences and technology lap
+                     3. Drop out leaners.
+                     Cause the challenge: Each School has a large number of students.
+                     Less pass rate in Sciences and technology because of less pretcails in high school and college.
+                     No moretivel speaks in school around final Exam time or friends infuse.
+                     Why should it be fixing: To educate more young people and give them skill of life which is 
+                     education. People with education have more chances in life and with this lap being build it will help 
+                     them to understand more about the subject him/her doing in school. 
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      </div><!-- container --> 
+      </section><!-- section --> 
+       <br>  <br>  <br> 
+       
+      <div class="col-lg-4 centered">
+     
+         <img class="img img-circle" src="http://i.imgur.com/eh9eeVQ.png" height="120px" width="120px" alt=""> 
+         <br> 
+
+         <h4><b>Project 1</b></h4>
+         <p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
+      </div>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/eh9eeVQ.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 2</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/eh9eeVQ.pnghttp://i.imgur.com/eh9eeVQ.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 3</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      </div>
+      <section class="section-divider textdivider divider1" style="background:url('http://milliwall.com/wp-content/uploads/2015/03/Watercolor-Painting-Landscape-43-HD-Wallpaper.jpg') no-repeat center top; background-size: cover;">
+         <section data-toggle="modal" data-target="#myModal6" href="#" class="box isotope-item food security">
+            <div class="container">
+               <h1>Food Security</h1>
+               <hr>
+               <p>The educational opportunities for children in Khayelitsha are vanishingly slim. Among 64 schools and one collage in Khayelitsha, each school has about 1300 students. In 2011, only 20 students (.04 percent) went on to study at the University of Cape Town.</p>
+            </div>
+         </section>
+      </section>
+      </figure> 
+
+      <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="false">&times;</button>
+                  <h4 class="modal-title">Food Security</h4>
+               </div>
+               <div class="modal-body">
+                  <p><img class="img-responsive" src="https://www.prepbootstrap.com/Content/images/shared/shield/portfolio/folio01.jpg" alt=""></p>
+                  <p>Problems: 1.Shortage of educational opportunities
+                     2. Sciences and technology lap
+                     3. Drop out leaners.
+                     Cause the challenge: Each School has a large number of students.
+                     Less pass rate in Sciences and technology because of less pretcails in high school and college.
+                     No moretivel speaks in school around final Exam time or friends infuse.
+                     Why should it be fixing: To educate more young people and give them skill of life which is 
+                     education. People with education have more chances in life and with this lap being build it will help 
+                     them to understand more about the subject him/her doing in school. 
+                  </p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+      </div>
+      <!-- /.modal -->
+      </div><!-- container --> 
+      </section><!-- section --> 
+       <br>  <br>  <br> 
+       
+      <div class="col-lg-4 centered">
+     
+         <img class="img img-circle" src="http://i.imgur.com/1QLDgCW.png" height="120px" width="120px" alt=""> 
+         <br> 
+
+         <h4><b>Project 1</b></h4>
+         <p>Mike combines an expert technical knowledge with a real eye for design. Working with clients from a wide range of industries, he fully understands client objectives when working on a project, large or small.</p>
+      </div>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/1QLDgCW.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 2</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+      </div>
+      <!-- col-lg-3 --> 
+      <div class="col-lg-4 centered">
+         <img class="img img-circle" src="http://i.imgur.com/1QLDgCW.png" height="120px" width="120px" alt=""> 
+         <br> 
+         <h4><b>Project 3</b></h4>
+         <p>Tim is an experienced marcoms practitioner and manages projects from inception to delivery. He understands the synergy between great design and commercial effectiveness which shines through on every project.</p>
+         <br>
+     <br><br>
+     <br><br>
+     <br>
+      </div>
+      </div>
+
+     <!-- <div id="footerwrap">
+   <div class="container">
+      <h6>Created by <a href="http://blacktie.co">BlackTie.co</a> - Copyright 2014</h6>
+   </div>
+</div> -->
    </body>
 </html>
