@@ -1,3 +1,32 @@
+
+<!DOCTYPE html>
+<head>
+  <script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+  <style>
+    body {
+      font-family: helvetica, sans-serif;
+  margin: 0 auto;
+      text-align: center;
+      background: url("http://cooperart.co.za/index.php/gallery/south-african-landscape-paintings/image?view=image&format=raw&type=orig&id=30");
+      background-size: cover;
+      background-position: center;
+      color: white;
+
+      font-family: helvetica;
+    }
+    h2 {
+          font-family: helvetica, sans-serif;
+  margin: 0 auto;
+      text-align: center;
+      color: white;
+
+      font-family: helvetica;
+    }
+    </style>
+<%=render "nav"%>
+
+<body>
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,6 +50,9 @@
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+  </body>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</head>
