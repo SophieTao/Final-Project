@@ -21,7 +21,7 @@ get 'newprojects/publicproject'
 get 'newprojects/privateproject'
 get 'newprojects/team'
 get 'newprojects/individual'
-
+get 'newprojects/testingAPI'
 
   # You can have the root of your site routed with "root"
 

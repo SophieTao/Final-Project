@@ -1,5 +1,6 @@
 class NewprojectsController < ApplicationController
    before_action :authenticate_user!
+ 
 
 
   def index
@@ -258,7 +259,7 @@ class NewprojectsController < ApplicationController
     end
   end
 
-
+  
 
 
   private
