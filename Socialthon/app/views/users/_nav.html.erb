@@ -2,7 +2,7 @@
 <nav class="navbar navbar-default navbar-fixed-top"> 
   <div class="container-fluid"> 
     <div class="navbar-header"> 
-      <a class="navbar-brand" href="#">SocialThon</a> 
+      <a class="navbar-brand" href="#">Socialthon</a> 
     </div> 
     <div> 
       <ul class="nav navbar-nav"> 
@@ -11,7 +11,7 @@
       <li><%= link_to 'Projects', projects_path%></li>
   <%user=current_user%>
   <%if user!=nil%>
-    <li><%=link_to "Apply", user_newprojects_path(current_user)%></li>
+    <li><%=link_to "Post", user_newprojects_path(current_user)%></li>
   <%else%>
            <li><%=link_to "Apply", user_session_path%></li>
    <%end%>
@@ -30,8 +30,9 @@
       h3 {
         font-family: 'Slabo 27px', serif;
   text-align: center;
-  font-size: 80px;
+  font-size: 60px;
     color: white;
+    
       }
       h4 {
   font-family: 'Slabo 27px', serif;
@@ -44,5 +45,10 @@ h6 {font-family: 'Lato', sans-serif;
   font-size: 20px;
   color: black;
 }
+footer {
+  color: white;
+}
+
  <body style = "background-color:#f5f5f5"> 
+}
 </style>
