@@ -14,6 +14,7 @@
  *= require main
  *= require animate-custom
  *= require styles
+ *= require agency
  *= require_tree .
  *= require_self
  */

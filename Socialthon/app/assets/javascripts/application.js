@@ -9,8 +9,14 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
 //= require jquery
+//=requrie  jquery.easing.min
+//= requrie classie
+//=require cbpAnimatedHeader.min
+//=requrie jqBootstrapValidation
+//=requrie contact_me
+//=require agency
 //= require jquery_ujs
 //= require modernizr.custom
 //= require twitter/bootstrap
