@@ -11,21 +11,16 @@
  * file per style scope.
  *
  *= require font-awesome
- *= require main
+ *= require rails_bootstrap_forms
  *= require animate-custom
- *= require styles
- *= require agency
  *= require_tree .
+ *= require main
+
+ *= require styles
  *= require_self
  */
 
-
-/*
- *= require rails_bootstrap_forms
- */
-
-
- textarea{
+textarea{
   width: 100px;
   height: 100px;
 }
@@ -36,7 +31,7 @@ div{
 
 body {
   font-family: "Raleway-Regular", Arial, sans-serif;
-
+  background-color: #f5f5f5;
   margin: 0;
   font-weight: normal;
   font-style: normal;
@@ -63,4 +58,53 @@ body {
   border-radius: 25px;
 }
 
+h3 {
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+  font-size: 60px;
+  color: white;    
+}
+
+h4 {
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+  font-size: 40px;
+}
+
+h6 {font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+footer {
+  color: white;
+}
+
+h1 {
+font-family: 'Roboto Slab', serif;
+text-align: center;
+font-size: 80px;
+color: #aaaaaa;
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
+vertical-align: -2em !important;
+margin-bottom: 0.67em;
+background: none !important;
+padding: 0 !important;
+}
+h2 {
+font-family: 'Roboto Slab', serif;
+text-align: center;
+font-size: 40px;
+color: white;
+display: inline !important;
+border: none !important;
+box-shadow: none !important;
+height: 1em !important;
+width: 1em !important;
+margin: 0 .07em !important;
 }
