@@ -14,26 +14,24 @@
  *= require rails_bootstrap_forms
  *= require animate-custom
  *= require_tree .
-<<<<<<< HEAD
- *= require_self
 
-
-=======
  *= require main
->>>>>>> bffe6e8bf18e38c42984a87a694878dd9695264b
+
 
  *= require styles
  *= require_self
  */
 
-<<<<<<< HEAD
+
  textarea{
 	width: 100px;
 	height: 100px;
 
 
-div{
-		display: block;
+
+
+div {
+	display: block;
 }
 
 body {
@@ -95,32 +93,3 @@ footer {
   color: white;
 }
 
-h1 {
-font-family: 'Roboto Slab', serif;
-text-align: center;
-font-size: 80px;
-color: #aaaaaa;
-display: inline !important;
-border: none !important;
-box-shadow: none !important;
-height: 1em !important;
-width: 1em !important;
-margin: 0 .07em !important;
-vertical-align: -2em !important;
-margin-bottom: 0.67em;
-background: none !important;
-padding: 0 !important;
-}
-h2 {
-font-family: 'Roboto Slab', serif;
-text-align: center;
-font-size: 40px;
-color: white;
-display: inline !important;
-border: none !important;
-box-shadow: none !important;
-height: 1em !important;
-width: 1em !important;
-margin: 0 .07em !important;
->>>>>>> bffe6e8bf18e38c42984a87a694878dd9695264b
-}
