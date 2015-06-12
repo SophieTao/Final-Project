@@ -38,17 +38,6 @@ ActiveRecord::Schema.define(version: 20150610221416) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "hashtags", force: :cascade do |t|
-    t.string   "categorytext"
-    t.integer  "user_id"
-    t.integer  "newproject_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-  end
-
-  add_index "hashtags", ["newproject_id"], name: "index_hashtags_on_newproject_id"
-  add_index "hashtags", ["user_id"], name: "index_hashtags_on_user_id"
-
   create_table "healths", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,7 +1,12 @@
-<!-- ==== HEADERWRAP ==== -->
-<div id="headerwrap" id="home" name="home" style="background:url('http://i.imgur.com/X5kMUxS.jpg') no-repeat center top; background-size: cover;">
+
+<div id="headerwrap" id="home" name="home" style="background:url('http://i.imgur.com/G05BokS.jpg') no-repeat center top; background-size: cover;">
+
    <header class="clearfix">
       <style>
+      .title{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   }
          h1 {
          font-family: 'Roboto Slab', serif;
          text-align: center;
@@ -30,7 +35,192 @@
          width: 1em !important;
          margin: 0 .07em !important;
          }
-      </style>
+
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+  </style>
+      <%=render 'nav'%>
       <h1><span class="icon icon-shield"></span></h1>
       <h1>Socialthon</h1>
       <br> <br>
@@ -323,124 +513,132 @@
    </section>
    <!-- /container -->
    <!-- ==== SECTION DIVIDER4 ==== -->
+   
+   <!-- ==== SECTION DIVIDER6 ==== -->
 
-
-
-
-
-   <section class="section-divider textdivider divider3" style="background:url('http://i.imgur.com/8HnUL9K.jpg') no-repeat center top; background-size: cover;">
-      <div class="container">
-         <h3>
-            Our Story
-            <hr>
-            <p>Timeline</p>
-         </h3>
-      </div>
-      <!-- container -->
-   </section>
-   <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About</h2>
-      
-                </div>
+<div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Socialthon is on F.I.R.E</h1>
+         <p>https://www.facebook.com/groups/socialthon/</p>
+    </div>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge info"><i class="glyphicon glyphicon-hand-left"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Humble Beginning</h4>
+              <center><p><class="text-muted">06.02.2015
+              </p></center>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://i.imgur.com/3FLLdYR.jpg?3" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>06/02/2015</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
-                                </div>
-                                <div class="timeline-body">
-                                  <h6>  <p class="text-muted"> Bandwidth Barn </p><p class="text-muted">Discover the community</p></h6>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="http://i.imgur.com/VClUVtb.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>06/06/2015</h4>
-                                    <h4 class="subheading">Socialthon is Born</h4>
-                                </div>
-                                <div class="timeline-body">
-                                   <h6> <p class="text-muted">Knead Bakery & Cafe</p>
-                                   
-                                     <p class="text-muted">Created a blueprint for our long-term project</p></h6>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="timeline-body">
+             <center> <strong><p>Visit The CiTi Barn</p></strong></center>
             </div>
-        </div>
-    </section>
+            <div class="timeline-body">
+                       
+             
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-chevron-right"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Birth of SOCIALTHON</h4>
+              <center><p><class="text-muted">06.06.2015 </center>
+            </div>
+            <div class="timeline-body">
+              <p><center> <strong>First Meeting: @ Kneed</strong></center> </p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-eye-open"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Second Meeting</h4>
+              <center><p><class="text-muted">06.12.2015 </center>
+            </div>
+            <div class="timeline-body">
+              <p><center> <strong> Getting Data From the Town: @ Kneed</strong></center> </p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge default"><i class="glyphicon glyphicon-home"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Socialthon ~ing</h4>
+              <center><p><class="text-muted">July </center>
+            </div>
+            <div class="timeline-body">
+              <p><center> Contact WFUNA @ Global Hackathon Seoul</center> </p>
+            </div>
+          </div>
+        </li>
+        <li>
+           <div class="timeline-badge default"><i class="glyphicon glyphicon-arrow-left"></i></div>
+               <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Socialthon ~ing</h4>
+              <center><p><class="text-muted">Nov.2015~Feb.2016 </center>
+            </div>
+            <div class="timeline-body">
+              <p><center> Partnership with Hackathons in the US</center> </p>
+            </div>
+          </div>
+        </li>
+    </ul>
+</div>
 
-   </section>
+
+<!-- ==== SECTION DIVIDER6 ==== -->
+
+
 <!-- ==== SECTION DIVIDER6 ==== -->
 <section class="section-divider textdivider divider6" style="background:url('http://aow.co.za/wp-content/uploads/2012/07/2816-Aow-Anton-Gericke.jpg') no-repeat center top; background-size: cover;">
    <div class="container">
       <h3>
       <br>
-         Khayelitsha Community 
+      <div class="title">
+         <font size="80">Khayelitsha Community </font>
          <hr>
          <p>Cape Town</p>
       </h3>
+      </div>
    </div>
    <!-- container -->
 </section>
 <!-- section -->
 <div class="container" id="contact" name="contact">
    <div class="row">
-      <br>
-      <h4 class="centered">THANKS FOR VISITING US</h4>
-      <hr>
-      <br>
-      <br>
-      <div class="col-lg-4">
-         <h4>Contact Information</h4>
 
-         <p><a href="https://www.facebook.com/groups/837424239656270/"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <h4 class="centered">THANKS FOR VISITING US</h4></div>
+      <hr>
+
+      <div class="col-lg-12">
+       
+         <h4>Contact Information</h4>
+     
+            <center><a href="https://www.facebook.com/groups/837424239656270/"><i class="fa fa-facebook-square fa-2x"></i></a>
             <a href="https://twitter.com/SocialThon"><i class="fa fa-twitter-square fa-2x"></i></a>
             <a href="https://plus.google.com/u/2/102540893630511551963/about"><i class="fa fa-google-plus-square fa-2x"></i></a>
-            <a href="https://www.youtube.com/channel/UCioWZa-eSxOPy4Y7Secwr5A"><i class="fa fa-youtube-square fa-2x"></i></a>
-         </p>
+            <a href="https://www.youtube.com/channel/UCioWZa-eSxOPy4Y7Secwr5A"><i class="fa fa-youtube-square fa-2x"></i></a></center>
+        
       </div>
       <!-- col -->
      
-      <div class="col-lg-6">
-         <h4>Support Us</h4>
-         <h6>
-            <p>Socialthon needs your help.</p>
-         </h6>
+      <div class="col-lg-12">
+         <h4>Support Us <br>  <h6>
+            <center><p>Socialthon needs your help.</p></center>
+         </h6> </h4>
       </div>
-      <!-- col -->
-   </div>
+
    <!-- row -->
 </div>
 <!-- container -->
 <div id="footerwrap">
    <div class="container">
-      
-
+   
                    <footer> <img src='/assets/logo.jpg'  height="30" width="30"/> Copyright &copy; Socialthon 
    </div>
 </div>

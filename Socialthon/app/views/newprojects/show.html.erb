@@ -1,4 +1,12 @@
 <%=render 'nav'%> 
+<style>
+.newproject_background{
+        background: url("/assets/logo_edited.png");
+    width: 100%;
+    height: 1100px;
+    background-size: cover;
+}
+</style>
 <div class="newproject_background">
     <!-- Contact Section -->
     <section id="contact">
@@ -115,11 +123,11 @@
                         <div id="success"></div>
                         <div class="row">
                             
-                                <button type="submit" class="btn btn-success btn-mg">
+                                <button type="submit" class="btn btn-warning btn-mg">
                                 <%=link_to "Your Projects", user_newprojects_path(current_user)%></button>
-                                <button type="submit" class="btn btn-success btn-mg">
+                                <button type="submit" class="btn btn-warning btn-mg">
                                 <%=link_to "Edit", edit_user_newproject_path(current_user,@newproject.id)%></button>
-                                <button type="submit" class="btn btn-success btn-mg">
+                                <button type="submit" class="btn btn-warning btn-mg">
                                 <%=link_to "Delete", user_newproject_path(current_user,@newproject.id), method: :delete, data: {confirm: "Are you sure you want to delete your project?"}%></button>
                             </div>
                         </div>
