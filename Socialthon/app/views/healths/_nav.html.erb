@@ -17,7 +17,7 @@
       <%if user!=nil%>
         <li><%=link_to "Apply", user_newprojects_path(current_user)%></li>
       <%else%>
-               <li><%=link_to "Apply", user_session_path%></li>
+          <li><%=link_to "Your Projects", user_session_path%></li>
        <%end%>
       <li><%= link_to 'About Us', teams_path%></li>
         </div>
